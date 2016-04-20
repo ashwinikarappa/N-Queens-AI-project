@@ -2,4 +2,7 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.SafeVarargs"/>
+<fullyQualifiedTypeName name="ForwardChecking"/>
+<fullyQualifiedTypeName name="ChessBoard"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,12 @@
+// Backtracking with forward checking // No MRV 
+public class ForwardChecking {
+	public void forwardChecking(int n, int qi){
+		ChessBoard c = new ChessBoard(n);
+		int safePlace = c.getFirstSafePlace(qi);
+		
+	}
+	public static void main(String[] args){
+		ForwardChecking f = new ForwardChecking();
+		f.forwardChecking(4, 0);
+	}
+}

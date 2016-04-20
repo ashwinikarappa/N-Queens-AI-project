@@ -1,0 +1,16 @@
+import java.util.Arrays;
+
+
+public class ChessBoard {
+	int numberOfQueens;
+	boolean safePlaces[];
+	public ChessBoard(int n){
+		numberOfQueens = n;
+		safePlaces = new boolean[n];
+		Arrays.fill(safePlaces, Boolean.TRUE);
+	}
+	public static void main(String[] args){
+		ChessBoard c  = new ChessBoard(4);
+		System.out.println(c.safePlaces[0]);
+	}
+}

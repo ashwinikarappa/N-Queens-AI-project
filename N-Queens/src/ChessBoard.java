@@ -1,0 +1,62 @@
+import java.util.Arrays;
+
+
+public class ChessBoard {
+	int numberOfQueens;
+	boolean safePlaces[][];
+	int queenPlacement[];
+	public ChessBoard(int n){
+		numberOfQueens = n;
+		safePlaces = new boolean[n][n];
+		for(int i=0; i<n; i++)
+			Arrays.fill(safePlaces[i], Boolean.TRUE);
+		queenPlacement = new int[n];
+	}
+	public ChessBoard(ChessBoard c){
+		numberOfQueens = c.numberOfQueens;
+		safePlaces = new boolean[numberOfQueens][numberOfQueens];
+		for(int i=0; i<numberOfQueens; i++)
+			for(int j=0; j< numberOfQueens; j++)
+			safePlaces[i][j] = c.safePlaces[i][j];
+		queenPlacement = new int[numberOfQueens];
+		for(int i=0; i<numberOfQueens; i++)
+			queenPlacement[i] = c.queenPlacement[i];
+	}
+	
+	public int getFirstSafePlace(int qi){
+		for(int i=0;i<numberOfQueens; i++){
+			if(safePlaces[qi][i])
+				return i;
+		}
+		return -1;
+	}
+	
+	public void updateSafePlaces(int queen, int placedIndex){
+		int row = queen + 1;
+		int column = placedIndex + 1;
+		
+		// updating all row 
+		while( row < numberOfQueens){
+			safePlaces[row][placedIndex] = false;
+			row+=1;
+		}
+		row = queen + 1;
+		while((row < numberOfQueens) && (column < numberOfQueens)){
+			safePlaces[row][column] = false;
+			row += 1;
+			column += 1;
+		}
+		
+		row = queen + 1;
+		column = placedIndex - 1;
+		while((row < numberOfQueens) && (column >= 0 )){
+			safePlaces[row][column] = false;
+			row += 1;
+			column -= 1;
+		}
+	}
+	public static void main(String[] args){
+	/*	ChessBoard c  = new ChessBoard(4);
+		System.out.println(c.safePlaces[0][0]);*/
+	}
+}
