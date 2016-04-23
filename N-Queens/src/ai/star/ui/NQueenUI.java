@@ -8,14 +8,8 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
-import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -23,32 +17,34 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.EtchedBorder;
 import javax.swing.border.LineBorder;
 
 import ai.star.enums.Algorithm;
+import ai.star.enums.Queens;
+import ai.star.enums.Panels;
 import net.miginfocom.swing.MigLayout;
-import ai.star.enums.N;
 
 public class NQueenUI {
 
 	private JFrame frame;
-	private int n;
-	private BufferedImage queenImage;
+	public static int N;
 
 	private JPanel mainPanel;
 	private JLabel lblTitle;
 	private JPanel controlsPanel;
 	private JPanel choicePanel;
-private JLabel lblChoice;
-private JPanel nPanel;
-private JLabel lblN;
-private JPanel buttonsPanel;
-private JButton btnSolve;
-private JPanel solutionPanel;
-private JLabel lblSolutions;
+	private JComboBox<Algorithm> comboBoxChoice;
+	private JLabel lblChoice;
+	private JPanel nPanel;
+	private JLabel lblN;
+	private JComboBox<Queens> comboBoxN;
+	private JPanel buttonsPanel;
+	private JButton btnSolve;
 
-/**
+	private SolutionsPanel solutionsPanel;
+	private ComparisonsPanel comparisonsPanel;
+
+	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -76,12 +72,6 @@ private JLabel lblSolutions;
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		try {
-			queenImage = ImageIO.read(new File("queen.png"));
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-
 		frame = new JFrame();
 		frame.setBounds(100, 100, 829, 491);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -113,7 +103,7 @@ private JLabel lblSolutions;
 		lblChoice.setForeground(Color.BLUE);
 		choicePanel.add(lblChoice, "cell 1 1 2 1,alignx center,aligny center");
 
-		JComboBox<Algorithm> comboBoxChoice = new JComboBox<Algorithm>();
+		comboBoxChoice = new JComboBox<Algorithm>();
 		comboBoxChoice.setModel(new DefaultComboBoxModel<Algorithm>(Algorithm.values()));
 		comboBoxChoice.setSelectedIndex(0);
 		comboBoxChoice.setToolTipText("Algorithm Choice");
@@ -133,8 +123,8 @@ private JLabel lblSolutions;
 		lblN.setForeground(Color.BLUE);
 		lblN.setFont(new Font("Segoe UI", Font.BOLD, 24));
 
-		JComboBox<N> comboBoxN = new JComboBox<>();
-		comboBoxN.setModel(new DefaultComboBoxModel<N>(N.values()));
+		comboBoxN = new JComboBox<>();
+		comboBoxN.setModel(new DefaultComboBoxModel<Queens>(Queens.values()));
 		comboBoxN.setSelectedIndex(0);
 		nPanel.add(comboBoxN, "cell 1 2 2 1,alignx center,aligny center");
 		comboBoxN.setForeground(new Color(0, 128, 0));
@@ -143,9 +133,10 @@ private JLabel lblSolutions;
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				n = ((N) comboBoxN.getSelectedItem()).getN();
+				N = ((Queens) comboBoxN.getSelectedItem()).getN();
 			}
 		});
+		N = ((Queens) comboBoxN.getSelectedItem()).getN();
 
 		buttonsPanel = new JPanel();
 		buttonsPanel.setBorder(new LineBorder(Color.RED, 1, true));
@@ -157,19 +148,19 @@ private JLabel lblSolutions;
 			public void actionPerformed(ActionEvent e) {
 				switch ((Algorithm) comboBoxChoice.getSelectedItem()) {
 				case BACKTRACKING:
-					backtrack(n);
+					backtrack(N);
 					break;
 				case FORWARD_CHECKING:
-					forwardCheck(n);
+					forwardCheck(N);
 					break;
 				case MINIMUM_CONFLICTS:
-					solveWithMinimumConflicts(n);
+					solveWithMinimumConflicts(N);
 					break;
 				case MRV:
-					mrv(n);
+					mrv(N);
 					break;
 				case COMPARE:
-					compare(n);
+					compare(N);
 					break;
 				default:
 					break;
@@ -182,83 +173,33 @@ private JLabel lblSolutions;
 		btnSolve.setForeground(new Color(128, 0, 0));
 		btnSolve.setFont(new Font("Segoe UI", Font.BOLD, 24));
 
-		solutionPanel = new JPanel();
-		solutionPanel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.ORANGE, Color.YELLOW));
-		mainPanel.add(solutionPanel, BorderLayout.CENTER);
-
-		String[] solutions = { "0,1,2,3", "2,0,1,3" };
-		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
-		solutionPanel.setLayout(new MigLayout("", "[450px]", "[33px][33px][23px]"));
-
-		lblSolutions = new JLabel("Solutions");
-		lblSolutions.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSolutions.setForeground(Color.ORANGE);
-		lblSolutions.setFont(new Font("Segoe UI", Font.BOLD, 24));
-		solutionPanel.add(lblSolutions, "cell 0 0,alignx center,aligny center");
-
-		JComboBox<String> solutionComboBox = new JComboBox<String>(solutionModel);
-		solutionComboBox.setToolTipText("Solutions");
-		solutionComboBox.setForeground(new Color(128, 0, 128));
-		solutionComboBox.setFont(new Font("Segoe UI", Font.BOLD, 20));
-		solutionPanel.add(solutionComboBox, "cell 0 1,growx,aligny top");
-
-		solutionComboBox.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				String[] solutions = solutionComboBox.getSelectedItem().toString().split(",");
-				JPanel gridPanel = new JPanel();
-
-				gridPanel.setLayout(new GridLayout(n, n));
-
-				for (int outerIndex = 0; outerIndex < n; outerIndex++) {
-					for (int innerIndex = 0; innerIndex < n; innerIndex++) {
-						JLabel imageLabel = new JLabel();
-						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
-						if (solutions[outerIndex].equals("" + innerIndex)) {
-							imageLabel = new JLabel(new ImageIcon(queenImage));
-						}
-						gridPanel.add(imageLabel);
-					}
-				}
-
-				if (solutionPanel.getComponentCount() > 2)
-					solutionPanel.remove(2);
-				solutionPanel.add(gridPanel, "cell 0 2,alignx center,growy");
-				gridPanel.revalidate();
-				gridPanel.repaint();
-
-			}
-		});
-
 	}
 
 	protected void backtrack(int n) {
+		if(comparisonsPanel != null)
+			comparisonsPanel.show(false);
+		String[] solutions = { "0,1,2,3", "2,0,1,3" };
+		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
 
+		solutionsPanel = new SolutionsPanel(Panels.SOLVE, solutionModel);
+		mainPanel.add(solutionsPanel.getPanel(), BorderLayout.CENTER);
+		solutionsPanel.show(true);
 	}
 
 	protected void forwardCheck(int n) {
-
 	}
 
 	protected void solveWithMinimumConflicts(int n) {
-
 	}
 
 	protected void mrv(int n) {
-
 	}
 
 	protected void compare(int n) {
-		lblSolutions.setText("Comparison Results");
-		if(solutionPanel.getComponentCount() > 2) {
-			solutionPanel.remove(1);
-			solutionPanel.remove(2);
-		} else if(solutionPanel.getComponentCount() == 2) {
-			solutionPanel.remove(1);
-		}
-		
-		solutionPanel.revalidate();
-		solutionPanel.repaint();
+		if(solutionsPanel != null)
+			solutionsPanel.show(false);
+		comparisonsPanel = new ComparisonsPanel(Panels.COMPARE);
+		mainPanel.add(comparisonsPanel.getPanel(), BorderLayout.CENTER);
+		comparisonsPanel.show(true);
 	}
 }
