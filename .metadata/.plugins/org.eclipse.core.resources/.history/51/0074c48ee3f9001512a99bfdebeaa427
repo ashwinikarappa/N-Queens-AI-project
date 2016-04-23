@@ -1,7 +1,0 @@
-// Backtracking with forward checking // No MRV 
-public class ForwardChecking {
-	public void forwardChecking(int n){
-		ChessBoard c = new ChessBoard(n);
-		
-	}
-}

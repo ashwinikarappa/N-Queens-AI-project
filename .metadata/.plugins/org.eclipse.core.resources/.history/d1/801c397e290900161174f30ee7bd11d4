@@ -1,0 +1,22 @@
+package star.objectoriented;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Driver {
+	public static void main(String[] args){
+		ForwardChecking f = new ForwardChecking();
+		//NqueenPuzzleBoard puzzleBoard = new NqueenPuzzleBoard(7);
+		//int numberOfQueens = Integer.parseInt(args[0]);
+		int numberOfQueens= 10;
+		ArrayList<int[]> solutions = f.computeNqueensSolution(numberOfQueens);
+		Driver d = new Driver();
+		d.printNqueenSolutions(solutions);
+		
+	}
+	public void printNqueenSolutions(ArrayList<int[]> solutions){
+		for(int i=0;i<solutions.size();i++){
+			int[] solution = solutions.get(i);
+			System.out.println(Arrays.toString(solution));
+		}
+	}
+}

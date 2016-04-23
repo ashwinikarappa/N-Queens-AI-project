@@ -40,13 +40,14 @@ public class ChessBoard {
 			safePlaces[row][placedIndex] = false;
 			row+=1;
 		}
+		// updating right diagonal elements
 		row = queen + 1;
 		while((row < numberOfQueens) && (column < numberOfQueens)){
 			safePlaces[row][column] = false;
 			row += 1;
 			column += 1;
 		}
-		
+		// updating left diagonal elements
 		row = queen + 1;
 		column = placedIndex - 1;
 		while((row < numberOfQueens) && (column >= 0 )){
@@ -55,8 +56,5 @@ public class ChessBoard {
 			column -= 1;
 		}
 	}
-	public static void main(String[] args){
-	/*	ChessBoard c  = new ChessBoard(4);
-		System.out.println(c.safePlaces[0][0]);*/
-	}
+	
 }

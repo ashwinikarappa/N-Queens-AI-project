@@ -1,0 +1,20 @@
+package star.objectoriented;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Backtracking {
+	ArrayList<int[]> solutions = new ArrayList<int[]>();
+	public static int nodesComputed = 0;
+	public ArrayList<int[]> computeNqueensSolution(int numberOfQueens){
+		
+		NqueenPuzzleBoard puzzleBoard = new NqueenPuzzleBoard(numberOfQueens);
+		backtracking(numberOfQueens, 0, puzzleBoard);
+		return solutions;
+	}
+	public int backtracking(int n, int qi, NqueenPuzzleBoard puzzleBoard){
+		return 0;
+	}
+}

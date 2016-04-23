@@ -1,6 +1,8 @@
+
 // Backtracking with forward checking // No MRV 
 public class ForwardChecking {
-	public int forwardChecking(int n, int qi,ChessBoard c){
+	
+	public int forwardChecking(int n, int qi, ChessBoard c){
 		int returnValue = 0;
 		ChessBoard newChessBoard;
 			if(qi<n){
@@ -22,13 +24,6 @@ public class ForwardChecking {
 				System.out.println();
 				for(int i=0;i< 5;i++){
 				System.out.print(c.queenPlacement[i]);
-				}
-				System.out.println("\nSafe Places");
-				for(int j=0;j<5;j++){
-					for(int k=0;k<5;k++){
-						System.out.print(c.safePlaces[j][k]+ " ");
-					}
-					System.out.println();
 				}
 				qi--;
 				return -1;
