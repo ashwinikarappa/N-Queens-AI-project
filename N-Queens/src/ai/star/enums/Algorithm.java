@@ -2,7 +2,7 @@ package ai.star.enums;
 
 public enum Algorithm {
 	BACKTRACKING("backtracking"), FORWARD_CHECKING("forward checking"), MINIMUM_CONFLICTS("minimum conflicts"), MRV(
-			"MRV");
+			"MRV"), COMPARE("compare all");
 
 	private final String type;
 
