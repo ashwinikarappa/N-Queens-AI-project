@@ -1,9 +1,12 @@
 package ai.star.csp;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 
 public class Backtracking {
+	public static int nodesComputed = 0;
+	public static int numberOfSolutions = 0;
 	  //check if the column is safe place to put Qi (ith Queen)
 	  private static boolean isSafePlace(int column, int Qi, int[] board) {
 	 
@@ -32,12 +35,15 @@ public class Backtracking {
 	  
 	  private static void placeQueenOnBoard(int Qi, int[] board) {
 		    int n = board.length;
+		   
 		    //base case
 		    if (Qi == n) {// a valid configuration found.
-		      System.out.println(Arrays.toString(board));
+		      System.out.println(Arrays.toString(board)+ " Nodes computed " +nodesComputed );
+		      numberOfSolutions++;
 		    } else {
 		      //try to put the ith Queen (Qi) in all of the columns
 		      for (int column = 0; column < n; column++) {
+		    	  nodesComputed ++;
 		        if (isSafePlace(column, Qi, board)) {
 		          board[Qi] = column;
 		          //then place remaining queens.
@@ -47,10 +53,16 @@ public class Backtracking {
 		           * placed queens in isSafePlace method and it doesnot care what values
 		           * are available in next positions.*
 		           */
-		          board[Qi] = -1;
+		          if(numberOfSolutions==1)
+		        	  return;
+		          else
+		        	  board[Qi] =-1;
+		         
 		        }
 		      }
+		      
 		    }
+		  
 		  }
 		 
 }
