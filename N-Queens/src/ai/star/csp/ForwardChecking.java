@@ -1,3 +1,4 @@
+package ai.star.csp;
 // Backtracking with forward checking // No MRV 
 public class ForwardChecking {
 	public int forwardChecking(int n, int qi,ChessBoard c){
