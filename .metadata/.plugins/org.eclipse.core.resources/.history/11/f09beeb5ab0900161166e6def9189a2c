@@ -1,0 +1,8 @@
+package ai.star.csp;
+
+public class MinConflicts {
+	public static void main(String[] args){
+		
+	}
+	
+}

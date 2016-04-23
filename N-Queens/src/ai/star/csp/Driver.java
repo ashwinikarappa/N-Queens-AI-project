@@ -4,18 +4,22 @@ import java.util.Arrays;
 
 public class Driver {
 	public static void main(String[] args){
-		ForwardChecking f = new ForwardChecking();
-		//NqueenPuzzleBoard puzzleBoard = new NqueenPuzzleBoard(7);
-		//int numberOfQueens = Integer.parseInt(args[0]);
-		int numberOfQueens = 12;
-		ArrayList<int[]> solutions = f.computeNqueensSolution(numberOfQueens);
 		Driver d = new Driver();
-		d.printNqueenSolutions(solutions);
+		ForwardChecking f = new ForwardChecking();
+		f.forwardCheck(4, true);
+		f = new ForwardChecking();
+		System.out.println("Only one Solution");
+		d.printNqueenSolutions(f.solutions);
+		f.forwardCheck(4, false);
+		System.out.println("Below is the actual solution");
+		d.printNqueenSolutions(f.solutions);
 		
 	}
 	public void printNqueenSolutions(ArrayList<int[]> solutions){
 		for(int i=0;i<solutions.size();i++){
 			int[] solution = solutions.get(i);
+			String sol = Arrays.toString(solution);
+			System.out.println(sol.replace(" ", "").replace("[", "").replace("]", ""));
 			System.out.println(Arrays.toString(solution));
 		}
 	}

@@ -1,0 +1,23 @@
+package ai.star.csp;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Driver {
+	public static void main(String[] args){
+		ForwardChecking f = new ForwardChecking();
+		f.forwardCheck(4, true);
+		f = new ForwardChecking();
+		f.forwardCheck(4, true);
+		Driver d = new Driver();
+		d.printNqueenSolutions(f.solutions);
+		
+	}
+	public void printNqueenSolutions(ArrayList<int[]> solutions){
+		for(int i=0;i<solutions.size();i++){
+			int[] solution = solutions.get(i);
+			String sol = Arrays.toString(solution);
+			System.out.println(sol.replace(" ", "").replace("[", "").replace("]", ""));
+			System.out.println(Arrays.toString(solution));
+		}
+	}
+}

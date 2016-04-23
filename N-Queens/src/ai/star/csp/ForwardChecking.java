@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 
 public class ForwardChecking {
-	ArrayList<int[]> solutions = new ArrayList<int[]>();
-	public static int nodesComputed = 0;
-	public ArrayList<int[]> computeNqueensSolution(int numberOfQueens){
+	public ArrayList<int[]> solutions = new ArrayList<int[]>();
+	public int nodesComputed = 0;
+	public void forwardCheck(int numberOfQueens, boolean compare){
+		NqueenPuzzleSolver puzzleBoard = new NqueenPuzzleSolver(numberOfQueens);
+		forwardChecking(numberOfQueens, 0, puzzleBoard, compare);
 		
-		NqueenPuzzleBoard puzzleBoard = new NqueenPuzzleBoard(numberOfQueens);
-		forwardChecking(numberOfQueens, 0, puzzleBoard);
-		return solutions;
 	}
-	public int getFirstSafePlace(NqueenPuzzleBoard c, int qi){
+	public int getFirstSafePlace(NqueenPuzzleSolver c, int qi){
 		for(int i=0;i<c.numberOfQueens; i++){
 			if(c.safePlaces[qi][i])
 				return i;
@@ -20,7 +19,7 @@ public class ForwardChecking {
 		return -1;
 	}
 	
-	public void updateSafePlaces(NqueenPuzzleBoard c, int queen, int placedIndex){
+	public void updateSafePlaces(NqueenPuzzleSolver c, int queen, int placedIndex){
 		int row = queen + 1;
 		int column = placedIndex + 1;
 		
@@ -45,13 +44,13 @@ public class ForwardChecking {
 			column -= 1;
 		}
 	}
-	public int forwardChecking(int n, int qi,NqueenPuzzleBoard c){
+	public int forwardChecking(int n, int qi,NqueenPuzzleSolver c, boolean compare){
 		int returnValue = 0;
 		nodesComputed++;
-		NqueenPuzzleBoard newChessBoard;
+		NqueenPuzzleSolver newChessBoard;
 			if(qi<n){
 				do{
-					newChessBoard = new NqueenPuzzleBoard(c);
+					newChessBoard = new NqueenPuzzleSolver(c);
 					int safePlace = getFirstSafePlace(c,qi);
 					if(safePlace == -1){
 						return -1;
@@ -60,7 +59,7 @@ public class ForwardChecking {
 						newChessBoard.queenPlacement[qi] = safePlace;
 						updateSafePlaces(newChessBoard,qi,safePlace);
 						
-						returnValue = forwardChecking(n, qi + 1,newChessBoard);
+						returnValue = forwardChecking(n, qi + 1,newChessBoard, compare);
 						
 					}
 				c.safePlaces[qi][safePlace] = false;
@@ -71,8 +70,10 @@ public class ForwardChecking {
 				
 				solutions.add(c.queenPlacement);
 				System.out.println(nodesComputed);
-				//qi--;
-				//return -1;
+				if(!compare){
+					qi--;
+					return -1;
+				}
 			}
 
 			

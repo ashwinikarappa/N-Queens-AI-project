@@ -1,0 +1,74 @@
+package ai.star.csp;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Backtracking {
+	public static int nodesComputed = 0;
+	public static int numberOfSolutions = 0;
+	  //check if the column is safe place to put Qi (ith Queen)
+	  private static boolean isSafePlace(int column, int Qi, int[] board) {
+	 
+	    //check for all previously placed queens
+	    for (int i = 0; i < Qi; i++) {
+	      if (board[i] == column) { // the ith Queen(previous) is in same column
+	        return false;
+	      }
+	      //the ith Queen is in diagonal
+	      //(r1, c1) - (r2, c1). if |r1-r2| == |c1-c2| then they are in diagonal
+	      if (Math.abs(board[i] - column) == Math.abs(i - Qi)) {
+	        return false;
+	      }
+	    }
+	    return true;
+	  }
+	  
+	  public static void main(String args[]) {
+		    System.out.println("How many queens? ");
+		    Scanner sc = new Scanner(System.in);
+		    int n = sc.nextInt();
+		     //hold the column position of n queens
+		    Backtracking b = new Backtracking();
+		    b.backtrack(n, true);
+		    b.backtrack(n, false);
+		 
+		  }
+	  
+	  public void backtrack(int n, boolean compare){
+		  int[] board = new int[n];
+		  placeQueen(0, board);
+	  }
+	  public  void placeQueen(int Qi, int[] chessBoard) {
+		    int n = chessBoard.length;
+		   
+		    //base case
+		    if (Qi == n) {// a valid configuration found.
+		      System.out.println(Arrays.toString(chessBoard)+ " Nodes computed " +nodesComputed );
+		      numberOfSolutions++;
+		    } else {
+		      //try to put the ith Queen (Qi) in all of the columns
+		      for (int column = 0; column < n; column++) {
+		    	  nodesComputed ++;
+		        if (isSafePlace(column, Qi, chessBoard)) {
+		          chessBoard[Qi] = column;
+		          //then place remaining queens.
+		          placeQueen(Qi + 1, chessBoard);
+		          /**
+		           * backtracking. It is not required in this as we only look previously
+		           * placed queens in isSafePlace method and it doesnot care what values
+		           * are available in next positions.*
+		           */
+		          if(numberOfSolutions==1)
+		        	  return;
+		          else
+		        	  chessBoard[Qi] =-1;
+		         
+		        }
+		      }
+		      
+		    }
+		  
+		  }
+		 
+}

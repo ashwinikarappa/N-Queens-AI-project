@@ -1,2 +1,11 @@
 1461393024816	Delete element
 1461448609792	Move compilation unit
+1461450661777	Rename method 'placeQueenOnBoard'
+1461450688035	Rename local variable 'board'
+1461450712464	Rename local variable 'Qi'
+1461450729090	Rename local variable 'n'
+1461450772358	Rename method 'isSafePlace'
+1461450879370	Rename local variable 'Qi'
+1461450894057	Rename local variable 'column'
+1461451274447	Rename local variable 'chessBoard'
+1461452308265	Rename type 'NqueenPuzzleBoard'
