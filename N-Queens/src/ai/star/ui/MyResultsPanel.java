@@ -30,7 +30,7 @@ public class MyResultsPanel {
 		
 		panel = new JPanel();
 		panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.ORANGE, Color.YELLOW));
-		panel.setLayout(new MigLayout("", "[450px]", "[33px][33px][23px]"));
+		panel.setLayout(new MigLayout("", "[450px]", "[33px][33px][400px]"));
 
 		label = new JLabel(panelType.getPanelType());
 		label.setHorizontalAlignment(SwingConstants.CENTER);

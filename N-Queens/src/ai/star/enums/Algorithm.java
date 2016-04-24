@@ -1,8 +1,8 @@
 package ai.star.enums;
 
 public enum Algorithm {
-	BACKTRACKING("backtracking"), FORWARD_CHECKING("forward checking"), MINIMUM_CONFLICTS("minimum conflicts"), MRV(
-			"MRV"), COMPARE("compare all");
+	BACKTRACKING("BACKTRACK"), FORWARD_CHECKING("FORWARD CHECK"), MINIMUM_CONFLICTS("MINIMUM CONFLICTS"), MRV(
+			"MRV"), COMPARE("COMPARE ALL");
 
 	private final String type;
 
