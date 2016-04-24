@@ -81,11 +81,11 @@ public class Backtracking {
 	
 	public static void main(String args[]) {
 		Backtracking b = new Backtracking();
-		System.out.println("Comparing");
-		b.backtrack(5, true);
+		/*System.out.println("Comparing");
+		b.backtrack(5, true);*/
 		System.out.println("Not Comparing");
 		b = new Backtracking();
-		b.backtrack(5, false);
+		b.backtrack(10, false);
 	}
 
 

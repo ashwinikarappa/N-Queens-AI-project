@@ -19,34 +19,40 @@ public class MinConflicts {
 		return false;
 	}
 	public void minConflicts(int numberOfQueens){
+		
 		NqueenPuzzleSolver puzzleBoard = new NqueenPuzzleSolver(numberOfQueens);
 		int[] conflicts = new int[numberOfQueens];
 		for(int i=0;i< numberOfQueens;i++)
 			puzzleBoard.queenPlacement[i] = i;
 		shuffleArray(puzzleBoard.queenPlacement); // random complete assignment
-		conflicts = computeConflicts(puzzleBoard);
+		conflicts = computeConflicts(puzzleBoard); // compute the conflicts for this assignment
 		
 		do{
-			PriorityQueue<QueenConflicts> queue = new PriorityQueue<>(puzzleBoard.numberOfQueens, Collections.reverseOrder());
-			if(conflictsExist(conflicts)){
-				queue = prioritizeQueensBasedOnConflicts(queue,conflicts);
+			PriorityQueue<QueenConflicts> queue = new PriorityQueue<>(puzzleBoard.numberOfQueens, Collections.reverseOrder()); 
+			// priority queue for select queen at top with max conflicts for assigning new place
+			if(conflictsExist(conflicts)){ // if conflicts exists then only go for new assignment
+				queue = prioritizeQueensBasedOnConflicts(queue,conflicts); // prioritize queens according to the number of conflicts
 				QueenConflicts q = new QueenConflicts();
-				boolean changedPlacementIndex = false;
-				while( ((q = queue.poll()) != null) && (!changedPlacementIndex)) {
-				   // System.out.println("Queen Index = "+ q.queenIndex + " Conflicts= "+ q.numberOfConflicts);
-				    int[] newConflicts = computeNewPositionConflicts(q.queenIndex, puzzleBoard);
-				    int newPlacementIndex = getNewPlacementIndex(conflicts[q.queenIndex],newConflicts);
-				    if(changedPlacementIndex(newPlacementIndex,puzzleBoard.queenPlacement[q.queenIndex])){
+				boolean changedPlacementIndex = false; 
+				while( ((q = queue.poll()) != null) && (!changedPlacementIndex)) { // till all the queens are not checked for change of placement or 
+					//if placement of some queen is changed
+				    int[] newConflicts = computeNewPositionConflicts(q.queenIndex, puzzleBoard); // compute conflicts for each possible place for queen selected
+				    int newPlacementIndex = getNewPlacementIndex(conflicts[q.queenIndex],newConflicts); // select best place for queen selected
+				    if(changedPlacementIndex(newPlacementIndex,puzzleBoard.queenPlacement[q.queenIndex])){ 
 				    	changedPlacementIndex = true;
 				    	puzzleBoard.queenPlacement[q.queenIndex] = newPlacementIndex;
 				    }
 				}
+				if(!changedPlacementIndex) // all queens checked but none of the places changed then reshuffle placements
+					shuffleArray(puzzleBoard.queenPlacement);
 				conflicts = computeConflicts(puzzleBoard);
-				System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
+				nodesComputed ++;
+				//System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 			}
 		}while(conflictsExist(conflicts));
 		System.out.println("\n\n Solution");
 		System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
+		solutions.add(puzzleBoard.queenPlacement);
 	}
 	boolean changedPlacementIndex(int oldIndex, int newIndex){
 		if(oldIndex != newIndex)
@@ -119,5 +125,6 @@ public class MinConflicts {
 	public static void main(String[] args) {
 		MinConflicts m = new MinConflicts();
 		m.minConflicts(4);
+		System.out.println(m.nodesComputed);
 	}
 }
