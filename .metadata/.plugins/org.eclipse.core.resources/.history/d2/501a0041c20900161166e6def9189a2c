@@ -1,0 +1,15 @@
+package ai.star.csp;
+
+public class QueenConflicts {
+	int queenIndex;
+	int numberOfConflicts;
+	public QueenConflicts() {
+		// TODO Auto-generated constructor stub
+		queenIndex = 0;
+		numberOfConflicts = 0;
+	}
+	public QueenConflicts(int qIndex, int conflicts) {
+		queenIndex = qIndex;
+		numberOfConflicts = conflicts;
+	}
+}

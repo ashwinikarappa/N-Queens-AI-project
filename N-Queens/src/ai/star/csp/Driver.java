@@ -7,9 +7,10 @@ public class Driver {
 		Driver d = new Driver();
 		ForwardChecking f = new ForwardChecking();
 		f.forwardCheck(4, true);
-		f = new ForwardChecking();
+		
 		System.out.println("Only one Solution");
 		d.printNqueenSolutions(f.solutions);
+		f = new ForwardChecking();
 		f.forwardCheck(4, false);
 		System.out.println("Below is the actual solution");
 		d.printNqueenSolutions(f.solutions);

@@ -1,0 +1,20 @@
+package ai.star.csp;
+
+import java.util.ArrayList;
+
+public class MinConflicts {
+	private int nodesComputed = 0;
+	private ArrayList<int[]> solutions = new ArrayList<int[]>();
+	private ArrayList<Integer> randomNumbers = new ArrayList<Integer>(); 
+	public void minConflicts(int numberOfQueens){
+		NqueenPuzzleSolver puzzleBoard = new NqueenPuzzleSolver(numberOfQueens);
+		for(int i=0;i< numberOfQueens;i++){
+			int randomNum =0;
+			do{
+			 randomNum = 0 + (int)(Math.random() * (numberOfQueens - 1)); 
+			}while(!randomNumbers.contains(randomNum));
+			puzzleBoard.queenPlacement[i] = randomNum;
+		}
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;ar&apos; in &apos;ai.star.csp.MinConflicts.shuffleArray(...)&apos; to &apos;queenPlacement&apos;&#x0D;&#x0A;- Original project: &apos;N-Queens&apos;&#x0D;&#x0A;- Original element: &apos;ai.star.csp.MinConflicts.shuffleArray(int[]).ar&apos;&#x0D;&#x0A;- Renamed element: &apos;ar&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;ar&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;ai.star.csp{MinConflicts.java[MinConflicts~shuffleArray~\[I@ar!828!835!834!835!\[I!0!true" name="queenPlacement" references="true" stamp="1461457533633" version="1.0"/>
+</session>
