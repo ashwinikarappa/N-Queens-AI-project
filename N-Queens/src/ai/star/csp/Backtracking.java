@@ -1,56 +1,92 @@
 package ai.star.csp;
-import java.util.Arrays;
-import java.util.Scanner;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Backtracking {
-	  //check if the column is safe place to put Qi (ith Queen)
-	  private static boolean isSafePlace(int column, int Qi, int[] board) {
-	 
-	    //check for all previously placed queens
-	    for (int i = 0; i < Qi; i++) {
-	      if (board[i] == column) { // the ith Queen(previous) is in same column
-	        return false;
-	      }
-	      //the ith Queen is in diagonal
-	      //(r1, c1) - (r2, c1). if |r1-r2| == |c1-c2| then they are in diagonal
-	      if (Math.abs(board[i] - column) == Math.abs(i - Qi)) {
-	        return false;
-	      }
-	    }
-	    return true;
-	  }
-	  
-	  public static void main(String args[]) {
-		    System.out.println("How many queens? ");
-		    Scanner sc = new Scanner(System.in);
-		    int n = sc.nextInt();
-		    int[] board = new int[n]; //hold the column position of n queens
-		    placeQueenOnBoard(0, board);
-		 
-		  }
-	  
-	  private static void placeQueenOnBoard(int Qi, int[] board) {
-		    int n = board.length;
-		    //base case
-		    if (Qi == n) {// a valid configuration found.
-		      System.out.println(Arrays.toString(board));
-		    } else {
-		      //try to put the ith Queen (Qi) in all of the columns
-		      for (int column = 0; column < n; column++) {
-		        if (isSafePlace(column, Qi, board)) {
-		          board[Qi] = column;
-		          //then place remaining queens.
-		          placeQueenOnBoard(Qi + 1, board);
-		          /**
-		           * backtracking. It is not required in this as we only look previously
-		           * placed queens in isSafePlace method and it doesnot care what values
-		           * are available in next positions.*
-		           */
-		          board[Qi] = -1;
-		        }
-		      }
-		    }
-		  }
-		 
+	public int nodesComputed = 0;
+	public int numberOfSolutions = 0;
+	public ArrayList<int []> solutions = new ArrayList<int[]>();
+
+	public int getNodesComputed() {
+		return nodesComputed;
+	}
+
+	public void setNodesComputed(int nodesComputed) {
+		this.nodesComputed = nodesComputed;
+	}
+
+	public int getNumberOfSolutions() {
+		return numberOfSolutions;
+	}
+
+	public void setNumberOfSolutions(int numberOfSolutions) {
+		this.numberOfSolutions = numberOfSolutions;
+	}
+
+	public ArrayList<int[]> getSolutions() {
+		return solutions;
+	}
+
+	public void setSolutions(ArrayList<int[]> solutions) {
+		this.solutions = solutions;
+	}
+
+	private static boolean checkIfSafePlaceForQueen(int columnIndex, int queenIndex,
+			int[] board) {
+		for (int i = 0; i < queenIndex; i++) {
+			// Cannot place two queens in same column
+			if (board[i] == columnIndex) {
+				return false;
+			}
+			// Cannot place queens on diagonals of any other queens already placed
+			if (Math.abs(board[i] - columnIndex) == Math.abs(i - queenIndex)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+	public void backtrack(int n, boolean compare) {
+		int[] board = new int[n];
+		placeQueen(0, board,compare);
+	}
+
+	public void placeQueen(int queenIndex, int[] placement, boolean compare) {
+		int numberOfQueens = placement.length;
+
+		if (queenIndex == numberOfQueens) {
+			solutions.add(placement);
+			System.out.println(Arrays.toString(placement) + " Nodes computed "
+					+ nodesComputed);
+			numberOfSolutions++;
+		} else {
+			for (int column = 0; column < numberOfQueens; column++) {
+				nodesComputed++;
+				if (checkIfSafePlaceForQueen(column, queenIndex, placement)) {
+					placement[queenIndex] = column;
+					placeQueen(queenIndex + 1, placement,compare);
+					if ((numberOfSolutions == 1) && compare)
+						return;
+					else
+						placement[queenIndex] = -1;
+
+				}
+			}
+
+		}
+
+	}
+	
+	public static void main(String args[]) {
+		Backtracking b = new Backtracking();
+		System.out.println("Comparing");
+		b.backtrack(5, true);
+		System.out.println("Not Comparing");
+		b = new Backtracking();
+		b.backtrack(5, false);
+	}
+
+
 }

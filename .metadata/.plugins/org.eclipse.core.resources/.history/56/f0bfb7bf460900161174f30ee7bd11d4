@@ -1,0 +1,68 @@
+package star.objectoriented;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+
+public class Backtracking {
+	ArrayList<int[]> solutions = new ArrayList<int[]>();
+	public static int nodesComputed = 0;
+	public ArrayList<int[]> computeNqueensSolution(int numberOfQueens){
+		NqueenPuzzleBoard puzzleBoard = new NqueenPuzzleBoard(numberOfQueens);
+		backtracking(numberOfQueens, 0, 0, puzzleBoard);
+		return solutions;
+	}
+	public int backtracking(int n, int qi, int placementIndex, NqueenPuzzleBoard puzzleBoard){
+		System.out.println("Queen index= "+ qi+ " Placement index being checked= "+placementIndex+" nodesComputed ="+nodesComputed);
+		System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
+		nodesComputed++;
+		int returnValue  =0;
+		if(qi == n){
+			System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
+			return 0;
+		}
+		else if(placementIndex == n){
+			System.out.println("No index");
+			//return -1;
+		}else{
+			if( puzzleBoard.queenPlacement[qi]== -1)
+				if(isSafePlace(placementIndex, qi, puzzleBoard.queenPlacement)){
+					puzzleBoard.queenPlacement[qi] = placementIndex;
+					returnValue = backtracking(n, qi+1, 0, puzzleBoard);
+					if(returnValue == -1){
+						System.out.println("First time returned");
+						if((placementIndex + 1) != n){
+							puzzleBoard.queenPlacement[qi] = placementIndex +1;
+							backtracking(n, qi+1, 0, puzzleBoard);
+						}
+					}
+				}else{
+					backtracking(n, qi, placementIndex + 1, puzzleBoard);
+					
+				}
+		}
+		return 0;
+	}
+	public static void main(String[] args){
+		Backtracking b = new Backtracking();
+		b.computeNqueensSolution(4);
+		//System.out.println();
+	}
+	 private static boolean isSafePlace(int column, int Qi, int[] board) {
+		 
+		    //check for all previously placed queens
+		    for (int i = 0; i < Qi; i++) {
+		      if (board[i] == column) { // the ith Queen(previous) is in same column
+		        return false;
+		      }
+		      //the ith Queen is in diagonal
+		      //(r1, c1) - (r2, c1). if |r1-r2| == |c1-c2| then they are in diagonal
+		      if (Math.abs(board[i] - column) == Math.abs(i - Qi)) {
+		        return false;
+		      }
+		    }
+		    return true;
+		  }
+		  
+}

@@ -1,0 +1,42 @@
+// Backtracking with forward checking // No MRV 
+public class ForwardChecking extends ChessBoard{
+	public ForwardChecking(int c) {
+		super(c);
+		// TODO Auto-generated constructor stub
+	}
+	public int forwardChecking(int n, int qi,ChessBoard c){
+		int returnValue = 0;
+		ChessBoard newChessBoard;
+			if(qi<n){
+				do{
+					newChessBoard = new ChessBoard(c);
+					int safePlace = newChessBoard.getFirstSafePlace(qi);
+					if(safePlace == -1){
+						return -1;
+					}else{
+						newChessBoard.queenPlacement[qi] = safePlace;
+						newChessBoard.updateSafePlaces(qi,safePlace);
+						returnValue = forwardChecking(n, qi + 1,newChessBoard);
+					}
+				c.safePlaces[qi][safePlace] = false;
+				
+				}while(returnValue == -1);
+			}
+			if(qi==n){
+				System.out.println();
+				for(int i=0;i< 7;i++){
+				System.out.print(c.queenPlacement[i]);
+				}
+				qi--;
+				return -1;
+			}
+			return 0;
+		
+	}
+	public static void main(String[] args){
+	//	ChessBoard c = new ChessBoard(7);
+		ForwardChecking f = new ForwardChecking(7);
+		
+		f.forwardChecking(7, 0, c);
+	}
+}

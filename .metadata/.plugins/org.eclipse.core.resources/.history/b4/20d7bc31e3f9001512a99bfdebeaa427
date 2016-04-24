@@ -1,6 +1,0 @@
-// Backtracking with forward checking
-public class ForwardChecking {
-	public void forwardChecking(){
-		
-	}
-}
