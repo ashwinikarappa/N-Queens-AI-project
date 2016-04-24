@@ -1,5 +1,7 @@
 package ai.star.ui;
 
+import javax.swing.JScrollPane;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -23,10 +25,11 @@ public class ComparisonBarChart {
 		dataset.addValue(nodes, algorithm.getType(), "" + n);
 	}
 	
-	public ChartPanel getChartPanel() {
+	public JScrollPane getChartPanel() {
 		JFreeChart barChart = ChartFactory.createBarChart("Comparisons", "# of Queens", "# of Nodes Expanded",
 				getDataset(), PlotOrientation.VERTICAL, true, true, false);
-		return new ChartPanel(barChart);
+		JScrollPane scroller = new JScrollPane(new ChartPanel(barChart));
+		return scroller;
 	}
 
 }

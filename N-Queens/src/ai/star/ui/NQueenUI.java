@@ -53,7 +53,6 @@ public class NQueenUI {
 				try {
 					NQueenUI window = new NQueenUI();
 					window.frame.setVisible(true);
-					window.frame.setResizable(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -176,97 +175,108 @@ public class NQueenUI {
 	}
 
 	protected void backtrack(int n) {
-		if(comparisonsPanel != null)
+		if (comparisonsPanel != null)
 			comparisonsPanel.show(false);
-		String[] solutions = { "0,1,2,3", "2,0,1,3" };
+		String[] solutions = { "0,1,2,3,4,5", "5,2,0,4,1,3" };
 		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
 
+		if (solutionsPanel != null)
+			solutionsPanel.show(false);
 		solutionsPanel = new SolutionsPanel(Panels.SOLVE, solutionModel);
 		mainPanel.add(solutionsPanel.getPanel(), BorderLayout.CENTER);
 		solutionsPanel.show(true);
 	}
 
 	protected void forwardCheck(int n) {
-		if(comparisonsPanel != null)
+		if (comparisonsPanel != null)
 			comparisonsPanel.show(false);
 		String[] solutions = { "0,1,2,3", "2,0,1,3" };
 		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
 
+		if (solutionsPanel != null)
+			solutionsPanel.show(false);
 		solutionsPanel = new SolutionsPanel(Panels.SOLVE, solutionModel);
 		mainPanel.add(solutionsPanel.getPanel(), BorderLayout.CENTER);
 		solutionsPanel.show(true);
 	}
 
 	protected void solveWithMinimumConflicts(int n) {
-		if(comparisonsPanel != null)
+		if (comparisonsPanel != null)
 			comparisonsPanel.show(false);
 		String[] solutions = { "0,1,2,3", "2,0,1,3" };
 		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
 
+		if (solutionsPanel != null)
+			solutionsPanel.show(false);
 		solutionsPanel = new SolutionsPanel(Panels.SOLVE, solutionModel);
 		mainPanel.add(solutionsPanel.getPanel(), BorderLayout.CENTER);
 		solutionsPanel.show(true);
 	}
 
 	protected void mrv(int n) {
-		if(comparisonsPanel != null)
+		if (comparisonsPanel != null)
 			comparisonsPanel.show(false);
 		String[] solutions = { "0,1,2,3", "2,0,1,3" };
 		DefaultComboBoxModel<String> solutionModel = new DefaultComboBoxModel<String>(solutions);
 
+		if (solutionsPanel != null)
+			solutionsPanel.show(false);
 		solutionsPanel = new SolutionsPanel(Panels.SOLVE, solutionModel);
 		mainPanel.add(solutionsPanel.getPanel(), BorderLayout.CENTER);
 		solutionsPanel.show(true);
 	}
-	
+
 	protected void compare(int n) {
-		if(solutionsPanel != null)
+		if (solutionsPanel != null)
 			solutionsPanel.show(false);
 		ComparisonBarChart barChart = new ComparisonBarChart();
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 4, 15);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 4, 8);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 4, 10);
 		barChart.addToDataSet(Algorithm.MRV, 4, 10);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 5, 25);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 5, 17);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 5, 19);
 		barChart.addToDataSet(Algorithm.MRV, 5, 11);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 6, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 6, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 6, 25);
 		barChart.addToDataSet(Algorithm.MRV, 6, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 7, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 7, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 7, 25);
 		barChart.addToDataSet(Algorithm.MRV, 7, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 8, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 8, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 8, 25);
 		barChart.addToDataSet(Algorithm.MRV, 8, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 9, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 9, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 9, 25);
 		barChart.addToDataSet(Algorithm.MRV, 9, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 10, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 10, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 10, 25);
 		barChart.addToDataSet(Algorithm.MRV, 10, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 11, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 11, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 11, 25);
 		barChart.addToDataSet(Algorithm.MRV, 11, 18);
-		
+
 		barChart.addToDataSet(Algorithm.BACKTRACKING, 12, 30);
 		barChart.addToDataSet(Algorithm.FORWARD_CHECKING, 12, 18);
 		barChart.addToDataSet(Algorithm.MINIMUM_CONFLICTS, 12, 25);
 		barChart.addToDataSet(Algorithm.MRV, 12, 18);
+
+		if (comparisonsPanel != null)
+			comparisonsPanel.show(false);
 		comparisonsPanel = new ComparisonsPanel(Panels.COMPARE);
 		comparisonsPanel.addToPanel(barChart.getChartPanel());
 		mainPanel.add(comparisonsPanel.getPanel(), BorderLayout.CENTER);

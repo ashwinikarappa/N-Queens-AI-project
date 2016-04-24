@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 import ai.star.enums.Panels;
 
@@ -31,21 +32,23 @@ public class SolutionsPanel extends MyResultsPanel {
 			public void actionPerformed(ActionEvent e) {
 				String[] solutions = getSolution().split(",");
 				JPanel gridPanel = new JPanel();
-
+				JScrollPane scroller = new JScrollPane(gridPanel);
+				
 				gridPanel.setLayout(new GridLayout(NQueenUI.N, NQueenUI.N));
 
 				for (int outerIndex = 0; outerIndex < NQueenUI.N; outerIndex++) {
 					for (int innerIndex = 0; innerIndex < NQueenUI.N; innerIndex++) {
 						JLabel imageLabel = new JLabel();
-						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+						imageLabel.setHorizontalAlignment(JLabel.CENTER);
 						if (solutions[outerIndex].equals("" + innerIndex)) {
 							imageLabel = new JLabel(new ImageIcon(QUEEN_IMAGE));
 						}
+						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 						gridPanel.add(imageLabel);
 					}
 				}
 
-				addToPanel(gridPanel);
+				addToPanel(scroller);
 			}
 		});
 		

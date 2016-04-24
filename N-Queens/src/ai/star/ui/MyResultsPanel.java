@@ -9,6 +9,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.EtchedBorder;
 
@@ -30,7 +31,7 @@ public class MyResultsPanel {
 		
 		panel = new JPanel();
 		panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.ORANGE, Color.YELLOW));
-		panel.setLayout(new MigLayout("", "[450px]", "[33px][33px][400px]"));
+		panel.setLayout(new MigLayout());
 
 		label = new JLabel(panelType.getPanelType());
 		label.setHorizontalAlignment(SwingConstants.CENTER);
@@ -43,10 +44,10 @@ public class MyResultsPanel {
 		return panel;
 	}
 	
-	public void addToPanel(JPanel gridPanel) {
+	public void addToPanel(JScrollPane gridPanel) {
 		if (panel.getComponentCount() > 2)
 			panel.remove(2);
-		panel.add(gridPanel, "cell 0 2,alignx center,growy");
+		panel.add(gridPanel, "cell 0 2,alignx center, span, grow");
 
 		redraw();
 	}
