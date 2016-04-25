@@ -1,0 +1,18 @@
+package ai.star.csp;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+public class ForwardCheckingWithMRV {
+	public ArrayList<int[]> solutions = new ArrayList<int[]>();
+	public int nodesComputed = 0;
+	public void forwardCheckMRV(int numberOfQueens, boolean compare){
+		
+	}
+
+	public static void main(String[] args) {
+		ForwardCheckingWithMRV fMRV = new ForwardCheckingWithMRV();
+		fMRV.forwardCheckMRV(4, true);
+	}
+}

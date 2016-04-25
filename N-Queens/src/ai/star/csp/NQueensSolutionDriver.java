@@ -22,7 +22,7 @@ public class NQueensSolutionDriver {
 		System.out.println("***FW with MRV output ***");
 		d.printNqueenSolutions(fM.solutions);*/
 		NQueensSolutionDriver driver = new NQueensSolutionDriver();
-		ArrayList<String> solutions = driver.computeNqueensSolution(5, Algorithm.BACKTRACKING);
+		ArrayList<String> solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
 		driver.printNqueenSolutions(solutions);
 		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(5);
 		driver.printNqueensComparison(results);
@@ -60,6 +60,11 @@ public class NQueensSolutionDriver {
 					intSolutions = mC.solutions;
 					break;
 				// add here FW with MRV if completed
+				case FORWARD_MRV:
+					ForwardCheckingWithMRV fMRV = new ForwardCheckingWithMRV();
+					fMRV.forwardCheckingWithMRV(numberOfQueens, false);
+					intSolutions = fMRV.solutions;
+					break;
 				default:
 					break;
 			}	
@@ -89,6 +94,11 @@ public class NQueensSolutionDriver {
 				 MinConflicts mC = new MinConflicts();
 				 mC.minConflicts(i);
 				 comparisonResult = new ComparisonResults(Algorithm.MINIMUM_CONFLICTS, i, mC.nodesComputed);
+				 results.add(comparisonResult);
+				 
+				 ForwardCheckingWithMRV fMRV = new ForwardCheckingWithMRV();
+				 fMRV.forwardCheckingWithMRV(numberOfQueens, false);
+				 comparisonResult = new ComparisonResults(Algorithm.FORWARD_MRV, i, fMRV.nodesComputed);
 				 results.add(comparisonResult);
 				
 			 }

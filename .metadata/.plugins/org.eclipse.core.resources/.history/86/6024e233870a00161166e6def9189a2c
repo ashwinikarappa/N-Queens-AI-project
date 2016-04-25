@@ -1,0 +1,51 @@
+package ai.star.csp;
+
+import java.util.ArrayList;
+import java.util.PriorityQueue;
+import java.util.Random;
+
+
+public class ForwardCheckingWithMRV {
+	public ArrayList<int[]> solutions = new ArrayList<int[]>();
+	public int nodesComputed = 0;
+	public void forwardCheckingWithMRV(int numberOfQueens, boolean compare){
+		PuzzleBoard puzzleBoard = new PuzzleBoard(numberOfQueens);
+		
+		// Initially shuffle all the queens, since each has same MRV,
+		// instead of going sequentially, go in randomized order
+		int[] queenIndeces = new int[numberOfQueens];
+		for(int i=0;i< numberOfQueens;i++)
+			queenIndeces[i] = i;
+		shuffleArray(queenIndeces); // random complete assignment
+		
+		
+		PriorityQueue<QueenMRV> queue =new PriorityQueue<QueenMRV>(numberOfQueens);// prioritize queens according to the number of conflicts
+		for(int i=0;i<numberOfQueens;i++){
+			queue.add(new QueenMRV(queenIndeces[i],numberOfQueens));
+		}
+		
+	}
+	
+	void shuffleArray(int[] queenPlacement)
+	  {
+	    // If running on Java 6 or older, use `new Random()` on RHS here
+	    Random rnd = new Random();
+	    for (int i = queenPlacement.length - 1; i > 0; i--)
+	    {
+	      int index = rnd.nextInt(i + 1);
+	      // Simple swap
+	      int a = queenPlacement[index];
+	      queenPlacement[index] = queenPlacement[i];
+	      queenPlacement[i] = a;
+	    }
+	  }
+	
+	public void MRV(){
+		
+	}
+
+	public static void main(String[] args) {
+		ForwardCheckingWithMRV fMRV = new ForwardCheckingWithMRV();
+		fMRV.forwardCheckingWithMRV(4, true);
+	}
+}

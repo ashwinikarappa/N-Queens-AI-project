@@ -3,7 +3,6 @@ package ai.star.csp;
 public class QueenConflicts implements Comparable<QueenConflicts>{
 	int queenIndex;
 	int numberOfConflicts;
-	int mininumRemainingValues;
 	public QueenConflicts() {
 		// TODO Auto-generated constructor stub
 		queenIndex = 0;
