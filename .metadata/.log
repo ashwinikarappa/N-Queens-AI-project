@@ -2279,3 +2279,9 @@ Binding(ALT+ARROW_UP,
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-25 01:12:02.932
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-25 01:57:17.059
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-04-25 01:57:17.059
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
