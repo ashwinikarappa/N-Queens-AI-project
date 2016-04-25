@@ -1,6 +1,7 @@
 package ai.star.ui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -21,19 +22,19 @@ public class SolutionsPanel extends MyResultsPanel {
 
 	public SolutionsPanel(Panels panelType, DefaultComboBoxModel<String> solutionModel) {
 		super(panelType);
-		
+
 		solutionComboBox = new JComboBox<String>(solutionModel);
 		solutionComboBox.setToolTipText("Solutions");
 		solutionComboBox.setForeground(new Color(128, 0, 128));
 		solutionComboBox.setFont(new Font("Segoe UI", Font.BOLD, 20));
 		solutionComboBox.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String[] solutions = getSolution().split(",");
 				JPanel gridPanel = new JPanel();
 				JScrollPane scroller = new JScrollPane(gridPanel);
-				
+
 				gridPanel.setLayout(new GridLayout(NQueenUI.N, NQueenUI.N));
 
 				for (int outerIndex = 0; outerIndex < NQueenUI.N; outerIndex++) {
@@ -42,7 +43,7 @@ public class SolutionsPanel extends MyResultsPanel {
 						if (solutions[outerIndex].equals("" + innerIndex)) {
 							imageLabel = new JLabel(new ImageIcon(QUEEN_IMAGE));
 						}
-						imageLabel.setSize(500/NQueenUI.N, 500/NQueenUI.N);
+						imageLabel.setPreferredSize(new Dimension(560 / NQueenUI.N, 560 / NQueenUI.N));
 						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 						gridPanel.add(imageLabel);
 					}
@@ -51,7 +52,7 @@ public class SolutionsPanel extends MyResultsPanel {
 				addToPanel(scroller);
 			}
 		});
-		
+
 		panel.add(solutionComboBox, "cell 0 1,growx,aligny top");
 	}
 
