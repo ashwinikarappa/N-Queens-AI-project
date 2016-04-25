@@ -1,0 +1,66 @@
+package ai.star.csp;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import ai.star.enums.Algorithm;
+
+public class NqueenPuzzleSolver {
+	int numberOfQueens;
+	boolean safePlaces[][];
+	int queenPlacement[];
+	public NqueenPuzzleSolver(int n){
+		numberOfQueens = n;
+		safePlaces = new boolean[n][n];
+		for(int i=0; i<n; i++)
+			Arrays.fill(safePlaces[i], Boolean.TRUE);
+		queenPlacement = new int[n];
+		for(int i=0; i<numberOfQueens; i++)
+			queenPlacement[i] = -1;
+	}
+	
+	 public NqueenPuzzleSolver(NqueenPuzzleSolver c){
+		numberOfQueens = c.numberOfQueens;
+		safePlaces = new boolean[numberOfQueens][numberOfQueens];
+		for(int i=0; i<numberOfQueens; i++)
+			for(int j=0; j< numberOfQueens; j++)
+			safePlaces[i][j] = c.safePlaces[i][j];
+		queenPlacement = new int[numberOfQueens];
+		for(int i=0; i<numberOfQueens; i++)
+			queenPlacement[i] = c.queenPlacement[i];
+	}
+	
+	 public ArrayList<String> computeNqueensSolution(int numberOfQueens, boolean compare, Algorithm algorithm){
+		ArrayList<String> solutions = new ArrayList<String>();
+		switch (algorithm) {
+			case BACKTRACKING:
+				break;
+			case FORWARD_CHECKING:
+				break;
+			case MINIMUM_CONFLICTS:
+				break;
+			// add here FW with MRV if completed
+			default:
+				break;
+		}	
+			return solutions;
+	 }
+	 public ArrayList<ComparisonResults> compareNqueensSolutions(int numberOfQueens){
+		 ComparisonResults comparisonResult;
+		 ArrayList<ComparisonResults> results = new ArrayList<ComparisonResults>();
+		 for(int i=4;i<=numberOfQueens;i++){
+			
+			 Backtracking bT = new Backtracking();
+			 bT.backtrack(i, true);
+			 comparisonResult = new ComparisonResults(Algorithm.BACKTRACKING, i, bT.nodesComputed);
+			 results.add(comparisonResult);
+			
+			 ForwardChecking fC = new ForwardChecking();
+			 fC.forwardCheck(i, true);
+			 comparisonResult = new ComparisonResults(Algorithm.BACKTRACKING, i, fC.nodesComputed);
+			 results.add(comparisonResult);
+			
+			 
+		 }
+		 return results;
+	 }
+}

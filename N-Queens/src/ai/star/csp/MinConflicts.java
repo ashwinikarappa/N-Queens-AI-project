@@ -7,20 +7,23 @@ import java.util.PriorityQueue;
 import java.util.Random;
 
 public class MinConflicts {
-	private int nodesComputed = 0;
-	private ArrayList<int[]> solutions = new ArrayList<int[]>();
-	private ArrayList<Integer> randomNumbers = new ArrayList<Integer>(); 
-//	private int[] conflicts;
-	public boolean conflictsExist(int[] conflicts){
-		for(int i=0;i<conflicts.length;i++){
-			if(conflicts[i]!=0)
-				return true;
+	public int nodesComputed = 0;
+	public ArrayList<int[]> solutions = new ArrayList<int[]>();
+
+	public boolean conflictsExist(int[] conflicts, int[] queenPlacement){
+		if(queenPlacement[0]==-1)
+			return true;
+		else{
+			for(int i=0;i<conflicts.length;i++){
+				if(conflicts[i]!=0)
+					return true;
+			}
 		}
 		return false;
 	}
 	public void minConflicts(int numberOfQueens){
 		
-		NqueenPuzzleSolver puzzleBoard = new NqueenPuzzleSolver(numberOfQueens);
+		PuzzleBoard puzzleBoard = new PuzzleBoard(numberOfQueens);
 		int[] conflicts = new int[numberOfQueens];
 		for(int i=0;i< numberOfQueens;i++)
 			puzzleBoard.queenPlacement[i] = i;
@@ -30,7 +33,7 @@ public class MinConflicts {
 		do{
 			PriorityQueue<QueenConflicts> queue = new PriorityQueue<>(puzzleBoard.numberOfQueens, Collections.reverseOrder()); 
 			// priority queue for select queen at top with max conflicts for assigning new place
-			if(conflictsExist(conflicts)){ // if conflicts exists then only go for new assignment
+			if(conflictsExist(conflicts,puzzleBoard.queenPlacement)){ // if conflicts exists then only go for new assignment
 				queue = prioritizeQueensBasedOnConflicts(queue,conflicts); // prioritize queens according to the number of conflicts
 				QueenConflicts q = new QueenConflicts();
 				boolean changedPlacementIndex = false; 
@@ -49,7 +52,7 @@ public class MinConflicts {
 				nodesComputed ++;
 				//System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 			}
-		}while(conflictsExist(conflicts));
+		}while(conflictsExist(conflicts,puzzleBoard.queenPlacement));
 		System.out.println("\n\n Solution");
 		System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 		solutions.add(puzzleBoard.queenPlacement);
@@ -78,14 +81,14 @@ public class MinConflicts {
 		}
 		return queue;
 	}
-	private int[] computeConflicts(NqueenPuzzleSolver puzzleBoard){
+	public int[] computeConflicts(PuzzleBoard puzzleBoard){
 		int[] conflicts = new int[puzzleBoard.numberOfQueens];
 		for(int i=0;i< puzzleBoard.numberOfQueens;i++){
 			conflicts[i] = computeNumberOfAttackingQueens(puzzleBoard.queenPlacement[i],i,puzzleBoard.queenPlacement);
 		}
 		return conflicts;
 	}
-	private int[] computeNewPositionConflicts(int queenIndex, NqueenPuzzleSolver puzzleBoard){
+	public int[] computeNewPositionConflicts(int queenIndex, PuzzleBoard puzzleBoard){
 		int[] conflicts = new int[puzzleBoard.numberOfQueens];
 		for(int i=0;i< conflicts.length;i++){
 			conflicts[i] = computeNumberOfAttackingQueens(i,queenIndex,puzzleBoard.queenPlacement);
@@ -98,7 +101,7 @@ public class MinConflicts {
 		for (int i = 0; i < board.length; i++) {
 			// Cannot place two queens in same column
 			if(i != queenIndex){
-			if (board[i] == columnIndex) {
+			if ((board[i] == columnIndex) && (board[i]!=-1)) {
 				conflicts++;
 			}
 			// Cannot place queens on diagonals of any other queens already placed
@@ -124,7 +127,7 @@ public class MinConflicts {
 	  }
 	public static void main(String[] args) {
 		MinConflicts m = new MinConflicts();
-		m.minConflicts(4);
+		m.minConflicts(100);
 		System.out.println(m.nodesComputed);
 	}
 }

@@ -1,0 +1,27 @@
+package ai.star.csp;
+
+import ai.star.enums.Algorithm;
+
+public class ComparisonResults {
+	Algorithm algorithmType;
+	int numberOfQueens;
+	int numberOFNodeComputed;
+	public ComparisonResults() {
+		// TODO Auto-generated constructor stub
+		algorithmType = null;
+		numberOFNodeComputed = 0;
+		numberOfQueens = 0;
+	}
+	public ComparisonResults(Algorithm algoType, int numOfQueens, int nodecComputed) {
+		algorithmType = algoType;
+		numberOfQueens = numOfQueens;
+		numberOFNodeComputed = nodecComputed;
+	}
+	@Override
+	public String toString() {
+		return "ComparisonResults [algorithmType=" + algorithmType
+				+ ", numberOfQueens=" + numberOfQueens
+				+ ", numberOFNodeComputed=" + numberOFNodeComputed + "]";
+	}
+	
+}

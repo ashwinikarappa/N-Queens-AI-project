@@ -30,12 +30,12 @@ public class MyResultsPanel {
 		}
 		
 		panel = new JPanel();
-		panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.ORANGE, Color.YELLOW));
+		panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.BLACK, Color.GRAY));
 		panel.setLayout(new MigLayout());
 
 		label = new JLabel(panelType.getPanelType());
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setForeground(Color.ORANGE);
+		label.setForeground(Color.BLUE);
 		label.setFont(new Font("Segoe UI", Font.BOLD, 24));
 		panel.add(label, "cell 0 0,alignx center,aligny center");
 	}

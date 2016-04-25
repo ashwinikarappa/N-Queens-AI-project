@@ -1,8 +1,9 @@
 package ai.star.csp;
 
-public class QueenConflicts implements Comparable{
+public class QueenConflicts implements Comparable<QueenConflicts>{
 	int queenIndex;
 	int numberOfConflicts;
+	int mininumRemainingValues;
 	public QueenConflicts() {
 		// TODO Auto-generated constructor stub
 		queenIndex = 0;
@@ -13,12 +14,12 @@ public class QueenConflicts implements Comparable{
 		numberOfConflicts = conflicts;
 	}
 	@Override
-	public int compareTo(Object obj) {
+	public int compareTo(QueenConflicts obj) {
 		// TODO Auto-generated method stub
-		QueenConflicts obj2 = (QueenConflicts) obj;
-		if(numberOfConflicts < obj2.numberOfConflicts)
+		
+		if(numberOfConflicts < obj.numberOfConflicts)
 			return -1;
-		else if(numberOfConflicts > obj2.numberOfConflicts)
+		else if(numberOfConflicts > obj.numberOfConflicts)
 			return 1;
 		return 0;
 	}

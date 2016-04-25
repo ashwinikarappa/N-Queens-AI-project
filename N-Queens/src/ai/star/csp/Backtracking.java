@@ -1,15 +1,20 @@
 package ai.star.csp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Backtracking {
 	public int nodesComputed = 0;
 	public int numberOfSolutions = 0;
-	public ArrayList<int []> solutions = new ArrayList<int[]>();
+	public ArrayList<int[]> solutions ;
 
 	public int getNodesComputed() {
 		return nodesComputed;
+	}
+
+	public Backtracking() {
+		nodesComputed = 0;
+		numberOfSolutions = 0;
+		solutions = new ArrayList<int[]>();
 	}
 
 	public void setNodesComputed(int nodesComputed) {
@@ -32,14 +37,15 @@ public class Backtracking {
 		this.solutions = solutions;
 	}
 
-	private static boolean checkIfSafePlaceForQueen(int columnIndex, int queenIndex,
-			int[] board) {
+	private static boolean checkIfSafePlaceForQueen(int columnIndex,
+			int queenIndex, int[] board) {
 		for (int i = 0; i < queenIndex; i++) {
 			// Cannot place two queens in same column
 			if (board[i] == columnIndex) {
 				return false;
 			}
-			// Cannot place queens on diagonals of any other queens already placed
+			// Cannot place queens on diagonals of any other queens already
+			// placed
 			if (Math.abs(board[i] - columnIndex) == Math.abs(i - queenIndex)) {
 				return false;
 			}
@@ -47,10 +53,12 @@ public class Backtracking {
 		return true;
 	}
 
-
 	public void backtrack(int n, boolean compare) {
 		int[] board = new int[n];
-		placeQueen(0, board,compare);
+//		solutions = new ArrayList<int[]>();
+		placeQueen(0, board, compare);
+		//System.out.println(Arrays.toString(solutions.get(0)));
+
 	}
 
 	public void placeQueen(int queenIndex, int[] placement, boolean compare) {
@@ -58,19 +66,26 @@ public class Backtracking {
 
 		if (queenIndex == numberOfQueens) {
 			solutions.add(placement);
-			System.out.println(Arrays.toString(placement) + " Nodes computed "
-					+ nodesComputed);
 			numberOfSolutions++;
 		} else {
 			for (int column = 0; column < numberOfQueens; column++) {
 				nodesComputed++;
 				if (checkIfSafePlaceForQueen(column, queenIndex, placement)) {
 					placement[queenIndex] = column;
-					placeQueen(queenIndex + 1, placement,compare);
+					placeQueen(queenIndex + 1, placement, compare);
 					if ((numberOfSolutions == 1) && compare)
 						return;
 					else
-						placement[queenIndex] = -1;
+					{
+						int[] newPlacement = new int[numberOfQueens];
+						for(int i=0;i<numberOfQueens;i++){
+							if(i==queenIndex)
+								newPlacement[i] = -1;
+							else
+								newPlacement[i] = placement[i];
+						}
+						placement = newPlacement;
+					}
 
 				}
 			}
@@ -78,15 +93,11 @@ public class Backtracking {
 		}
 
 	}
-	
+
 	public static void main(String args[]) {
 		Backtracking b = new Backtracking();
-		/*System.out.println("Comparing");
-		b.backtrack(5, true);*/
-		System.out.println("Not Comparing");
 		b = new Backtracking();
-		b.backtrack(10, false);
+		b.backtrack(4, false);
 	}
-
 
 }

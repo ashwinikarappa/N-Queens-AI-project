@@ -1,0 +1,101 @@
+package ai.star.csp;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import ai.star.ui.SolutionsPanel;
+
+public class Backtracking {
+	public int nodesComputed = 0;
+	public int numberOfSolutions = 0;
+	public ArrayList<int []> solutions = new ArrayList<int[]>();
+
+	public int getNodesComputed() {
+		return nodesComputed;
+	}
+
+	public void setNodesComputed(int nodesComputed) {
+		this.nodesComputed = nodesComputed;
+	}
+
+	public int getNumberOfSolutions() {
+		return numberOfSolutions;
+	}
+
+	public void setNumberOfSolutions(int numberOfSolutions) {
+		this.numberOfSolutions = numberOfSolutions;
+	}
+
+	public ArrayList<int[]> getSolutions() {
+		return solutions;
+	}
+
+	public void setSolutions(ArrayList<int[]> solutions) {
+		this.solutions = solutions;
+	}
+
+	private static boolean checkIfSafePlaceForQueen(int columnIndex, int queenIndex,
+			int[] board) {
+		for (int i = 0; i < queenIndex; i++) {
+			// Cannot place two queens in same column
+			if (board[i] == columnIndex) {
+				return false;
+			}
+			// Cannot place queens on diagonals of any other queens already placed
+			if (Math.abs(board[i] - columnIndex) == Math.abs(i - queenIndex)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+
+	public 	ArrayList<int[]> backtrack(int n, boolean compare) {
+		int[] board = new int[n];
+		ArrayList<int[]> solutions = placeQueen(0, board,compare);
+		return solutions;
+	}
+
+	public ArrayList<int[]> placeQueen(int queenIndex, int[] placement, boolean compare) {
+		int numberOfQueens = placement.length;
+
+		if (queenIndex == numberOfQueens) {
+			solutions.add(placement);
+			System.out.println(Arrays.toString(solutions.get(0)));
+			System.out.println("Hey hi "+Arrays.toString(placement) + " Nodes computed "
+					+ nodesComputed);
+			numberOfSolutions++;
+		} else {
+			for (int column = 0; column < numberOfQueens; column++) {
+				nodesComputed++;
+				if (checkIfSafePlaceForQueen(column, queenIndex, placement)) {
+					placement[queenIndex] = column;
+					placeQueen(queenIndex + 1, placement,compare);
+					if ((numberOfSolutions == 1) && compare){
+						int[] nodes = new int[1];
+						nodes[0] = nodesComputed;
+						solutions.add(nodes);
+						return solutions;
+					}
+					else
+						placement[queenIndex] = -1;
+
+				}
+			}
+
+		}
+		return solutions;
+	}
+	
+	public static void main(String args[]) {
+		Backtracking b = new Backtracking();
+		/*System.out.println("Comparing");
+		b.backtrack(5, true);*/
+		System.out.println("Not Comparing");
+		b = new Backtracking();
+		ArrayList<int[]> solutions = b.backtrack(4, false);
+		System.out.println(Arrays.toString(solutions.get(0)));
+	}
+
+
+}

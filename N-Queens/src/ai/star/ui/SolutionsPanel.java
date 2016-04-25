@@ -39,10 +39,10 @@ public class SolutionsPanel extends MyResultsPanel {
 				for (int outerIndex = 0; outerIndex < NQueenUI.N; outerIndex++) {
 					for (int innerIndex = 0; innerIndex < NQueenUI.N; innerIndex++) {
 						JLabel imageLabel = new JLabel();
-						imageLabel.setHorizontalAlignment(JLabel.CENTER);
 						if (solutions[outerIndex].equals("" + innerIndex)) {
 							imageLabel = new JLabel(new ImageIcon(QUEEN_IMAGE));
 						}
+						imageLabel.setSize(500/NQueenUI.N, 500/NQueenUI.N);
 						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 						gridPanel.add(imageLabel);
 					}
