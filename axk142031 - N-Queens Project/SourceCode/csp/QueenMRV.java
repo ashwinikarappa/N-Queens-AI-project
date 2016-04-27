@@ -1,0 +1,26 @@
+package ai.star.csp;
+
+public class QueenMRV implements Comparable<QueenMRV>{
+	int queenIndex;
+	int mininumRemainingValues;
+	public QueenMRV() {
+		// TODO Auto-generated constructor stub
+		queenIndex = -1;
+		mininumRemainingValues = -1;
+	}
+	public QueenMRV(int qIndex, int MRV) {
+		queenIndex = qIndex;
+		mininumRemainingValues = MRV;
+	}
+
+	@Override
+	public int compareTo(QueenMRV o) {
+		// TODO Auto-generated method stub
+		if(mininumRemainingValues < o.mininumRemainingValues)
+			return -1;
+		else if(mininumRemainingValues > o.mininumRemainingValues)
+			return 1;
+		return 0;
+	}
+	
+}

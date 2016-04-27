@@ -1,0 +1,48 @@
+**********************************************************************
+				Experimental Comparison for NQueens Puzzle
+
+**********************************************************************
+
+***********     Information of folders and files present   ***********
+
+1. Unzip the folder "axk142031 - N-Queens Project.zip".
+2. "SourceCode" folder, has all the source code files.
+3. "axk142031-ProjectReport" is the report for NQueens project.
+4. "NQueensRunnable.jar" is the application file, which you can run by double clicking it.
+5. "NQueensRunnable_lib" folder contains some important jar library files needed for the application.
+6. Make sure when you are running "NQueensRunnable.jar", you have "queens.png" image and "NQueensRunnable_lib" folder at the location, from where you are running the "NQueensRunnable.jar".
+
+***********     Instructions for running the application   ***********
+1. Unzip the folder "axk142031 - N-Queens Project.zip".
+2. Double click the "NQueensRunnable.jar"
+3. This will open the application window.
+4. Application window has two sections
+	a) Left hand side section is for inputs.
+	b) Right hand side section is for output.
+5. On left hand side (Inputs)
+	i) You can select any algorithm list in the dropdown
+	for solving N-Queens.
+	ii) You can select any value of N from  the dropdown list.
+	iii) Then click on solve to see the solutions on the right hand side section.
+6. On right hand side (Outputs)
+	i) 
+	if 
+	in step 5.i), you select BACKTRACKING or FORWARD_CHECKING, select some N in 5.ii and click on solve
+		You will see all the solutions for N(selected)-Queens problem on right side in a dropdown.
+		If you select a particular solution from the dropdown, you will see the chessboard with queens placed for that solution.
+	else if 
+	in step 5.i), you select FORWARD_MRV or MINIMUM_CONFLICTS , select some N in 5.ii and click on solve
+		You will see only one solution for N(selected)-Queens problem on right side in the dropdown because these algorithms are random algorithms, so cannot monitor them for all solutions.
+		If you select that particular solution in the dropdown, you will see the chessboard with queens placed for that solution.
+		If you click on solve again you may get other soluions possible.
+	
+	else If 
+	in step 5.i), you select COMPARE_NUMBER_OF_NODES_COMPUTED or 			COMPARE_TIME_REQUIRED, select some N in 5.ii and click on solve then
+		on right side, you will see a graph of comparison 
+		for performance with respect to nodes computed or time required, over all N=4 till the N = selected N in step 5.ii, provided N(selected)<=15. If N > 15, graph will show comparison only for N.
+	  
+	
+	
+	
+	
+	

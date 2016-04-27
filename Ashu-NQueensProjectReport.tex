@@ -325,7 +325,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Experimental comparison of algorithms to solve N-Queens problem }
+\title{Experimental comparison of AI algorithms to solve N-Queens problem }
 
 
 % author names and affiliations
@@ -375,7 +375,7 @@ Email: axk142031@utdallas.edu}}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-This report discusses different techniques known for solving constraint satisfaction problems. I implemented few of these techniques which are namely backtracking, forward checking, variable ordering using minimum remaining values technique and minimum conflicts for solving N-Queens puzzle. N-Queens problem has some practical applications such as in traffic control, deadlock prevention, statistics, and parallel memory storage schemes. It is often used as an example of constraint satisfaction problem. I also present an experimental comparison of the techniques I implemented for solving this puzzle. 
+This report discusses different techniques known for solving constraint satisfaction problems. I implemented few of these techniques which are namely backtracking, forward checking, variable ordering using minimum remaining values and minimum conflicts for solving N-Queens puzzle. N-Queens problem has some practical applications such as in traffic control, deadlock prevention, statistics, and parallel memory storage schemes. It is often used as an example of constraint satisfaction problem. I also present an experimental comparison of the techniques that I implemented for solving this puzzle. 
 \\
 \\\smallskip
 \textit{Keywords---}
@@ -401,22 +401,21 @@ Constraint satisfaction problem, N-Queens, Backtracking, Forward checking,Variab
 
 \section{Introduction and Background [1,2]}
 
-We come across various puzzles related to chess boards such as counting the number of squares, counting rectangles and finding the best moves. The n-queens problem is one of the chess puzzles. This problem was 
-originally known as the 8-Queens problem. It has been a problem of interest for many mathematicians. The problem was generalized to N-Queens for N X N boards in 1850 by Franz Nauck. According to the chess rules, queens can attack by moving forward or backward in the same row, same column or diagonally. N-Queens puzzle asks, 'How to place N queens on N X N chess board, such that no two of them can attack each other?'. Figure 1, shows an example of 4-Queens problem. Part a), in figure 1, shows the wrong placement of queens, because the queens in second row and third row can attack each other since they lie on the same diagonal. To ensure that no two queens can attack each other, we have to place them such that no two queens lie on the same row, or column, or diagonal. Part b in figure 1), shows the correct placement of 4 queens where no two queens can attack each other. 
+We come across various puzzles based on chessboards such as counting the number of squares, counting the number of rectangles and finding the best moves. The n-queens problem is one of the chess puzzles. This problem was originally known as the 8-Queens problem. It has been of interest for many mathematicians. It was generalized to N-Queens for N X N boards in 1850 by Franz Nauck. According to the chess rules, queens can attack by moving forward or backward in the same row, the same column or the same diagonal. N-Queens puzzle asks, 'How to place N queens on N X N chess board, such that no two of them can attack each other?'. Figure 1, shows an example of 4-Queens problem. Part a), in figure 1, shows the wrong placement of queens, because the queens in second row and third row can attack each other since they lie on the same diagonal. Part b), in figure 1, shows the correct placement of 4 queens where no two queens can attack each other. 
 \par N-Queens puzzle has many practical applications like parallel memory storage schemes, VLSI testing, traffic control and deadlock prevention. This problem is an example of  backtracking algorithms, permutation generation, the divide and conquer paradigm, program development methodology, constraint satisfaction problems, integer programming, and specification. Thus, with the rapid development of computer science, N-Queens problem has gained a lot of attention and solving it with optimal techniques has gained importance.
-\par This report initially explains different AI techniques people experimented on to solve this puzzle in related work. I will also present there findings. Further, under my approach section, I explain the Constraint satisfaction problem solving techniques that I implemented for solving N-Queens puzzle. I also present the experimental results of these algorithms and my key observations. Finally, section V concludes the report.
+\par This report initially explains different AI techniques people experimented on to solve this puzzle in related work. Further, I explain constraint satisfaction problem solving techniques namely: backtracking, forward checking, forward checking with MRV and minimum conflicts that I implemented for solving N-Queens puzzle. I also present the experimental results of these algorithms and my key observations. Finally, I conclude the paper.
 
 \begin{figure}%
     \centering
     \subfloat[Wrong placement]{{\includegraphics[width=2.25 cm]{4QueensWrongSolution.png} }}%
-    \label{Figure1}
+    \label{Figure6}
     \qquad
     \subfloat[Correct placement]{{\includegraphics[width=2cm]{4QueensCorrectSolution.png} }}%
     \\
     \centering
  
-    \label{Figure2}
-\label{figure3}
+    \label{Figure7}
+\label{figure1}
 \caption{Example of 4 Queens puzzle}
 \end{figure}
 
@@ -430,67 +429,67 @@ originally known as the 8-Queens problem. It has been a problem of interest for 
 
 
 \section{Related work}
-Previously,  lots  of  work  is  done  on  N-Queens  problem. This problem can be solved using different techniques. Kuruvilla Mathew and Mujahid Tabassum in [3], compared the performances of search strategies namely: Breadth  First  Search,  Depth First Search, A* Search, Greedy Best First Search and the  Hill  Climbing  Search to solve 8 queens problem. They concluded A* is the best strategy amongst the others listed and it achieves convergence faster at cheaper cost and therefore they also suggest that A* is  best  suited  for  solving  issues  of  this  nature and also  has  the possibilities  to  be  applied  towards  issues  of  growing dimensionalities.	 K.  D. Crawford  in  [4],  applied  Genetic  Algorithm  and  have discussed  two  ways  to  solve  n-Queen  problem. Marko Božiković, Marin Golub, Leo Budin in [5], show how genetic  algorithms can  be  used  to  solve  n-Queen  problem. In this paper, they have also shared their experimental results for several large values of n and their conclusions for NP problems with genetic algorithms.
+Previously,  lots  of  work  is  done  on  N-Queens  problem. This problem can be solved using different techniques. Kuruvilla Mathew and Mujahid Tabassum in [3], compared the performances of search strategies namely: Breadth  First  Search,  Depth First Search, A* Search, Greedy Best First Search and the  Hill  Climbing  Search to solve 8 queens problem. They concluded that A* is the best strategy amongst the others listed and it achieves convergence faster, at cheaper cost, and therefore they also suggest that A* is  best  suited  for  solving  issues  of  this  nature and also  has  the possibilities  to  be  applied  towards  issues  of  growing dimensionalities.	 K.  D. Crawford  in  [4],  applied  Genetic  Algorithm  and  have discussed  two  ways  to  solve  n-Queen  problem. Marko Božiković, Marin Golub, Leo Budin in [5], show how genetic  algorithms can  be  used  to  solve  n-Queen  problem. In this paper, they have also shared their experimental results for several large values of n and their conclusions for NP problems with genetic algorithms.
 
 \section{Constraint satisfaction problems}
 
-Although, there are many ways of solving N-queens puzzle, it mainly falls under and is well known as  constraint satisfaction  problem.Constraint satisfaction problems are basically the problems in which there is a set of variables and a set of values. Each variable is to be assigned a value such that it satisfies all the constraints for the problem. N-Queens puzzle thus is a constraint satisfaction problem, where each of the queens are to be placed such that no two can attack each other.
+Although, there are many ways of solving N-queens puzzle, it mainly falls under and is well known as  constraint satisfaction  problem. Constraint satisfaction problems are basically the problems in which there is a set of variables and a set of values. Each variable is to be assigned a value, such that, it satisfies all the constraints for the problem. N-Queens puzzle, thus, is a constraint satisfaction problem, where queens are to be placed such that no two can attack each other.
 
 \section{Constraint Satisfaction problem solving techniques implemented[6,7]}
 
  
 \textbf{Soling N-Queens Problem}
-\par In N-Queens problem, no two queens should be on the same row or same column or same diagonal. I have implemented Backtracking, Forward checking, Forward checking with minimum remaining values and Minimum conflicts techniques for solving N-Queens puzzle. In the following section, I have explained in brief these techniques and illustrated them with 4 Queens example. Backtracking and forward checking examples are taken from [7]. I have created a similar example for forward checking with minimum remaining values and the example for minimum conflicts is taken from the book [6]. In the example figures, queens are placed column wise. There are 'N' columns and 'N' rows in a 'N x N' chess board. First Column has 'N' cells, because of 'N' rows, Second column also has 'N' cells and so on. These techniques, place queens column wise. In each column, one queen will be placed on any of the 'N' cells selecting the row such that it satisfies the constraints for N-Queens puzzle. For figures 2, 3, and 4 we have 4 x 4 chess boards. And red dot denotes the queen and cross mark denotes the places where queens cannot be placed. In figure 5, we have 8 x 8 chess board for minimum conflicts.
+\par In N-Queens problem, no two queens should be on the same row or the same column or the same diagonal. I have implemented Backtracking, Forward checking, Forward checking with minimum remaining values and Minimum conflicts techniques for solving N-Queens puzzle. In the following section, I have explained in brief these techniques and illustrated them with 4 Queens example. Backtracking and forward checking examples are taken from [7]. I have created a similar example for forward checking with minimum remaining values and the example for minimum conflicts is taken from the book [6]. In the example figures, queens are placed column wise. There are 'N' columns and 'N' rows in a 'N x N' chess board. First Column has 'N' cells, because of 'N' rows, Second column also has 'N' cells and so on. These techniques, place queens column wise. In each column, one queen will be placed on any of the 'N' cells by selecting the row such that, it satisfies the constraints for N-Queens puzzle. For figures 2, 3, and 4 we have 4 x 4 chess boards. And red dot denotes the queen and cross mark denotes the places where queens cannot be placed. In figure 5, we have 8 x 8 chess board for minimum conflicts.
 
 \subsection{Backtracking}
  Backtracking is a simple depth first search approach. It starts initially with any variable, assigns a value from the domain of values and then goes deeper into the tree to assign values to other variables. Later on, at some level, if it finds out that there are no values left for a variable, it backtracks and assigns different value to the parent variables. Figure 2, shows an example to understand backtracking approach for solving 4-queens problem.
  
  \textbf{Explaining the example- }
 
-1. First queen is placed in the first column and the first available row. Initially for the first queen it is first column and first row, then it goes down into the search tree and check assignments for other variables.
-\par 2. Second queen is placed in the second column, initially it checks whether placing second queen in the second column and first row is possible, then the algorithm understands that this is not the valid place, then it goes to the second row, again it understands that this is not the valid place, then it places the queen in the third row.
-\par 3. Once, the second queen is placed, it again goes down deeper into the tree and does the same thing for other queens.
-\par 4. But if for some queen, it does not find a cell to place the queen, it backtracks on the previous layer and checks other places for the queens placed before.
-\par 5. This algorithm will go on, until the last queen is placed.
+1. First queen is placed in the first column and the first available row. Initially for the first queen it is first column and first row, then it goes down into the search tree and check assignments for other queens.
+\par 2. Second queen is placed in the second column, initially it checks whether placing second queen in the second column and first row is possible, then the algorithm understands that this is not the valid place. Thus, it goes to the second row, again it understands that this is not the valid place, then it places the queen in the third row.
+\par 3. It again goes down deeper into the tree and does the same thing for other queens.
+\par 4. But if for some queen, it does not find a cell to place the queen, it backtracks on the previous level and checks other places for the previously placed queens.
+\par 5. This algorithm will go on until the last queen is placed.
 
 \begin{figure}
 \includegraphics[scale=0.5]{Backtracking.png}
 \caption{Backtracking approach}
-\label{Figure3}
+\label{Figure2}
 \end{figure}
 
 
 \subsection{Forward Checking}
 
-Generally, in most of the constraint satisfaction problems, as soon as any variable is assigned a value, this value is no longer valid for some of the other variables. Forward checking is the technique which is nothing but backtracking only, but it also saves the effect of variables assigned with values in the previous step and grows the search tree only for the assignments which are valid.
+Generally, in most of the constraint satisfaction problems, as soon as any variable is assigned a value, this value is no longer valid for some of the other variables. Forward checking is the technique which is nothing but backtracking, but it also saves the effect of variables assigned with values in the previous step and grows the search tree only for the assignments which are valid.
 
  \textbf{Explaining the example- }
-\\ Figure 3, shows an example of forward checking approach for solving 4 Queens approach. In this example, we can seen that, once a queen is placed, all the cells in its row, column and diagonals where other queens cannot be placed are marked with a cross. So, when the search tree goes deeper, it knows that for second queen some of the cells cannot be considered for the placement. Thus, the search tree that grows is smaller as compared to the backtracking. 
+\\ Figure 3, shows an example of forward checking approach for solving 4 Queens problem. In this example, we can see that, once a queen is placed, all the cells in its row, column and diagonals where other queens cannot be placed are marked with a cross. So, when the search tree goes deeper, it knows which cells cannot be considered for the placement of the current queen. Thus, the search tree that grows is smaller as compared to the backtracking. 
 
 \begin{figure}
 \includegraphics[scale=0.65]{ForwardChecking.png}
 \caption{Forward Checking approach}
-\label{Figure4}
+\label{Figure3}
 \end{figure}
 
-In my implementation of this algorithm, for every recursive call, I maintain an old and a new boolean N X N chessboard. As soon as I enter into the recursive call, I make a new chessboard from the old chessboard. I update the new one with false values for the cells which are no longer valid for other queens because of the place assigned for the current queen. When algorithm backtracks, it has the old chessboard to use for checking other places for previously assigned queens.
+In my implementation of this algorithm, for every recursive call, I maintain an old and a new boolean N X N chessboard. As soon as I enter into the recursive call, I make a new chessboard from the old chessboard. I update the new one with false values for the cells which are no longer valid for other queens because of the place assigned for the current queen. When algorithm backtracks, it has the old chessboard, which it can use for checking other places for previously assigned queens.
 
 \subsection{Variable Ordering and Value Ordering}
 
-Backtracking and Forward checking both these techniques do not use any special order for assigning values to the variables. Variable ordering technique is based on an intuitive idea of giving preference to the variable to be assigned a value which is left with the fewest possible “legal” values. This is also called as "Minimum Remaining Values", (MRV) heuristic. Value ordering heuristic known as "Least Constraining Values", (LCV) heuristics,  prefers the values that rules out the fewest choices for the neighboring variables in the constraint graph.
+Backtracking and Forward checking both these techniques do not use any special order for assigning values to the variables. Variable ordering technique is based on an intuitive idea of giving preference to the variable which is left with the fewest possible “legal” values. This is also called as "Minimum Remaining Values", (MRV) heuristic. Value ordering heuristic known as "Least Constraining Values", (LCV) heuristics,  prefers the values that rules out the fewest choices for the neighboring variables in the constraint graph.
 
-We can apply MRV and LCV heuristics, both as a combination or individually on backtracking as well as forward checking. For experimental analysis, I have implemented MRV heuristic for forward checking. Figure  5 shows an example for the same. \\
+We can apply MRV and LCV heuristics, both as a combination or individually on backtracking as well as forward checking. For experimental analysis, I have implemented MRV heuristic for forward checking. Figure  4 shows an example for the same. \\
 
 \textbf {Explaining the example- }
 
-In this example, initially every queen has minimum remaining values (MRV) equal to 4, since none of the queens have been placed. As MRV is same for all the queens, algorithm selects randomly selects any queen for the assignment. In the example shown, randomly 4th queen is selected initially for placement. Then, it marks the the cells with a cross which are ruled out for other queens. Similarly it repeats the process going down further for other queens. If MRV becomes zero for any queen, algorrithm backtracks as shown on the left branch of the tree. On the right branch of the tree, it can be seen on layer 3rd that MRV for queen 1 = 1, and queen 2 = 2, thus on the next step, algorithm selects queen 1 to be placed.
+In this example, initially every queen has minimum remaining values (MRV) equal to 4, since none of the queens have been placed. As MRV is same for all the queens, algorithm selects any queen randomly for the assignment. In the example shown, randomly 4th queen is selected for placement. Then, it marks the the cells with a cross which are ruled out for other queens. Similarly it repeats the process when going down further for other queens. If MRV becomes zero for any queen, algorithm backtracks as shown on the left branch of the tree. On the right branch of the tree, it can be seen on 3rd level, that MRV for queen 1 = 2, and queen 2 = 1, thus on the next step, algorithm first selects queen 2 for the placement.
 \\Algorithm terminates when all the four queens are placed with a valid placement. 
 
 
 \begin{figure}
 \includegraphics[scale=0.65]{ForwardCheckingWithMRV.png}
 \caption{Forward checking with minimum remaining values approach}
-\label{Figure5}
+\label{Figure4}
 \end{figure}
 
 
@@ -498,13 +497,13 @@ In my implementation of this algorithm, I am maintaining a minimum priority queu
 
 \subsection{Minimum Conflicts}
 
-In this technique, a complete random assignment is done for all the variables. Then the variables that are under conflicts, i.e the ones which violates the constrains are computed. Randomly any variable under conflict is reassigned to some other value by computing the value which will have least number of conflicts. Again conflicts for all the variables are computed, and the same process of reassigning the values to the variables in conflicts is repeated until there are no conflicts.
+In this technique, a complete random assignment is taken for all the variables. Then the variables that are under conflicts, i.e, the ones which violates the constrains are computed. Randomly any variable under conflict is reassigned to some other value by computing the value which will have least number of conflicts. Again conflicts for all the variables are computed, and the same process of reassigning the values to the variables in conflicts is repeated until there are no conflicts.
 
-Figure 6, shows an example for minimum conflicts [6]. 
+Figure 5, shows an example for minimum conflicts [6]. 
 \begin{figure}
 \includegraphics[scale=0.65]{MinimumConflicts.png}
 \caption{Minimum Conflicts approach}
-\label{Figure6}
+\label{Figure5}
 \end{figure}
 
 In my implementation of this algorithm, I am maintaining a max priority queue which after every complete random assignment of the problem, gives me the queen with the maximum number of conflicts and I select this queen for reassignment to the values which will have least number of conflicts. Again, conflicts are computed for all the queens and the process of reassigning the maximum priority queens (those with max number of conflicts) repeats until there are not conflicts.
@@ -643,11 +642,60 @@ In my implementation of this algorithm, I am maintaining a max priority queue wh
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
 
-\section{Experimental results}
+\section{Project Application Information}
 
-I have developed a project for solving N-Queens problem with the help of four techniques discussed above. 
+I have developed a project for solving N-Queens problem with the help of four techniques discussed above.
+Figure 7, shows a snap shot of my application. On left side, there is a dropdown to select the algorithm, and a dropdown to select the 'N' value and when you click on solve, you will see all the solutions on the right hand side. And if you select any particular solution from the dropdown of solutions on right side, you will see the chessboard with N-Queens placed for that solution.
+
+\par In the dropdown on the left side for inputs, if you select the COMPARE\_NUMBER\_OF\_NODES\_COMPUTED, you will see a comparison graph for the number of nodes computed in the search tree in order to get the first solution each, using all the four techiques. Example is shown in figure 6.
+
+\par  In the dropdown, if you select the COMPARE\_TIME\_REQUIRED, you will see a comparison graph for the the time required in order to get first solution each, using all the four techiques.
+
+
+\begin{figure}
+\includegraphics[scale=0.27]{N10nodesComputedComparison.png}
+\caption{Application image for showing comparison}
+\label{Figure9}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[scale=0.3]{BacktrackingNqueensSoln.png}
+\caption{Application image for showing NQueens solutions}
+\label{Figure9}
+\end{figure}
+
+\section{Experimental Results}
+
+I have analyzed the performance of the mentioned four algorithms based on the number of nodes computed and time required to compute the solutions. Backtracking and forward checking techniques generate a search tree, where nodes represent the states of the chessboard. At each level a new queen is placed and on the same level sibling nodes denote different cells checked for placing the queen.
+\par \textbf{Performance based on nodes computed}
+\par Backtracking checks all the places for every queen. That is, if there are 'd' domain values and 'N' variables then the search tree generated will be of n!d leaves, which is very huge. Thus the number of nodes computed for backtracking is the highest.
+\par Forward checking, rules out the values for next queen to be placed based on the previous queens assignment. Thus, the number of nodes computed in this case is less as compared to the backtracking approach. But, when we compare it with forward checking with MRV, nodes computed would be less or more. Reason being, Forward checking with MRV heuristic, randomly selects the queens, when every queen has the same minimum remaining values. Thus, if the queen selected randomly, gives a node which is closer to the solution, then forward checking with MRV heuristics will compute lesser nodes as compared to the forward checking.
+\par Minimum Conflicts starts with a random complete assignment. Thus, it eliminates the nodes that are computed for initial queen placements. This improves the performance to a great extent. I found out that even for N=1000, this algorithm solves N-Queens puzzle on an average just within 350 steps. Thus, this approach performes the best as compared to the other three techniques.
+\\ Figure 8, shows the analysis of nodes computed for N = 4 to N = 15.
+
+
+
+\par \textbf{Performance based on time required}
+
+As analyzed for N=4 till N=15, Backtracking requires very less time as compared to forward checking as well as forward checking with MRV. Reason for this behavior is because, backtracking requires very less computations as compared to forward checking and and forward checking with MRV though its search tree is larger. Forward checking and forward checking with MRV have to compute unsafe places for next all the queens based on the previous queen's assignment which eats up more time. Minimum conflicts is as compared to the other three techniques, is very fast, since it eliminates initial queen placements and starts directly with a random complete assignment.
+
+\begin{figure}
+\includegraphics[scale=0.51]{XLS_nodesComputed.png}
+\caption{Analysis of nodes computed}
+\label{Figure10}
+\end{figure}
+
+
+\begin{figure}
+\includegraphics[scale=0.61]{XLS_time.png}
+\caption{Analysis of time required}
+\label{Figure11}
+\end{figure}
+
 
 \section{Conclusion}
+Based on my experimental analysis, minimum conflicts approach proves to be the best approach for solving N-Queens problem as compared to backtracking, forward checking, and forward checking with MRV. It is better, both in terms of number nodes computed, i.e, equal to the number of steps in minimum conflicts as well as the time required to get to the solution. One by one computing the values for the variables recursively in the search tree does not help in the case of N-Queens. In fact, such techniques just need more time and huge memory for computing the solutions.
 
 \begin{thebibliography}{11}
 

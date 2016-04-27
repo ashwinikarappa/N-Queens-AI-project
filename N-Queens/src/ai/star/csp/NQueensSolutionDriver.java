@@ -17,7 +17,7 @@ public class NQueensSolutionDriver {
 		} else {
 		    endTime = System.currentTimeMillis();
 	           elapsedTime = endTime-startTime;
-	           System.out.println(":" + elapsedTime + " msec.");
+	          // System.out.println(":" + elapsedTime + " msec.");
 	            phase = 0;
 	       }
 	   }
@@ -37,28 +37,35 @@ public class NQueensSolutionDriver {
 		fM.forwardCheckMRV(4, true);
 		System.out.println("***FW with MRV output ***");
 		d.printNqueenSolutions(fM.solutions);*/
-	//	NQueensSolutionDriver driver = new NQueensSolutionDriver();
-		/*driver.timer();
-		ArrayList<String> solutions = driver.computeNqueensSolution(15, Algorithm.BACKTRACKING);
-		driver.timer();*/
-		//driver.printNqueenSolutions(solutions);
-		/*
-		 driver = new NQueensSolutionDriver();
+		NQueensSolutionDriver driver = new NQueensSolutionDriver();
+		//ArrayList<String> solutions;
+		driver.timer();
+		ArrayList<String> solutions = driver.computeNqueensSolution(1000, Algorithm.MINIMUM_CONFLICTS);
+		driver.timer();
+		driver.printNqueenSolutions(solutions);
+		
+		/* driver = new NQueensSolutionDriver();
 		 driver.timer();
-		 ArrayList<String> solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
+		  solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
 		 driver.timer();
 		//driver.printNqueenSolutions(solutions);
-		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(5,true);
+		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(30,false);
 		driver.printNqueensComparison(results);*/
 	}
 	public void printNqueenSolutions(ArrayList<String> solutions){
 		for(int i=0;i<solutions.size();i++){
+			if((i%4) ==0){
+			System.out.println();
+			System.out.println("****");}
 			System.out.println(solutions.get(i));
 		}
 	}
 	
 	public void printNqueensComparison(ArrayList<ComparisonResults> comparisonResults){
 		for(int i=0;i<comparisonResults.size();i++){
+			if((i%4) ==0){
+			System.out.println();
+			System.out.println("****");}
 			System.out.println(comparisonResults.get(i).toString());
 		}
 	}

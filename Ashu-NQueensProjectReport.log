@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  26 APR 2016 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  27 APR 2016 06:58
 entering extended mode
 **./Ashu-NQueensProjectReport.tex
 (Ashu-NQueensProjectReport.tex
@@ -269,7 +269,11 @@ Package caption Info: Unknown document class (or package),
 \c@lotdepth=\count101
 \sf@top=\skip47
 \sf@bottom=\skip48
-) (Ashu-NQueensProjectReport.aux)
+) (Ashu-NQueensProjectReport.aux
+
+LaTeX Warning: Label `Figure9' multiply defined.
+
+)
 \openout1 = `Ashu-NQueensProjectReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 320.
@@ -287,11 +291,11 @@ LaTeX Font Info:    ... okay on input line 320.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 320.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 320.
 
-
-("C:\Users\Ashwini\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Users\Ashwini\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 320.
+
 -- Lines per column: 56 (exact).
 
 ("C:\Users\Ashwini\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
@@ -327,10 +331,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--383
 File: 4QueensWrongSolution.png Graphic file (type png)
 
 <use 4QueensWrongSolution.png>
-Package pdftex.def Info: 4QueensWrongSolution.png used on input line 411.
+Package pdftex.def Info: 4QueensWrongSolution.png used on input line 410.
 (pdftex.def)             Requested size: 64.01869pt x 58.91194pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--411
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
 []\OT1/ptm/m/n/8 (a) |Wrong
  []
 
@@ -338,7 +342,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--411
 File: 4QueensCorrectSolution.png Graphic file (type png)
 
 <use 4QueensCorrectSolution.png>
-Package pdftex.def Info: 4QueensCorrectSolution.png used on input line 414.
+Package pdftex.def Info: 4QueensCorrectSolution.png used on input line 413.
 (pdftex.def)             Requested size: 56.9055pt x 60.13826pt.
 Missing character: There is no ≈ in font ptmr7t!
 Missing character: There is no æ in font ptmr7t!
@@ -352,10 +356,10 @@ Missing character: There is no á in font ptmr7t!
 File: Backtracking.png Graphic file (type png)
 
 <use Backtracking.png>
-Package pdftex.def Info: Backtracking.png used on input line 457.
+Package pdftex.def Info: Backtracking.png used on input line 456.
 (pdftex.def)             Requested size: 269.88261pt x 122.70813pt.
 
-Overfull \hbox (17.88261pt too wide) in paragraph at lines 457--458
+Overfull \hbox (17.88261pt too wide) in paragraph at lines 456--457
 [][] 
  []
 
@@ -363,14 +367,13 @@ Overfull \hbox (17.88261pt too wide) in paragraph at lines 457--458
 File: ForwardChecking.png Graphic file (type png)
 
 <use ForwardChecking.png>
-Package pdftex.def Info: ForwardChecking.png used on input line 471.
+Package pdftex.def Info: ForwardChecking.png used on input line 470.
 (pdftex.def)             Requested size: 274.0205pt x 184.96384pt.
 
-Overfull \hbox (22.0205pt too wide) in paragraph at lines 471--472
+Overfull \hbox (22.0205pt too wide) in paragraph at lines 470--471
 [][] 
  []
 
-[2 <./Backtracking.png> <./ForwardChecking.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -378,22 +381,25 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
-Underfull \hbox (badness 1527) in paragraph at lines 482--483
+Underfull \vbox (badness 5331) has occurred while \output is active []
+
+ [2 <./Backtracking.png> <./ForwardChecking.png>]
+Underfull \hbox (badness 1527) in paragraph at lines 481--482
 []\OT1/ptm/m/n/10 We can ap-ply MRV and LCV heuris-tics, both as a
  []
 
 
-Underfull \hbox (badness 7151) in paragraph at lines 482--483
+Underfull \hbox (badness 7151) in paragraph at lines 481--482
 \OT1/ptm/m/n/10 com-bi-na-tion or in-di-vid-u-ally on back-track-ing as well
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 482--483
+Underfull \hbox (badness 1629) in paragraph at lines 481--482
 \OT1/ptm/m/n/10 as for-ward check-ing. For ex-per-i-men-tal anal-y-sis, I have
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 482--483
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
@@ -401,15 +407,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 482--483
 File: ForwardCheckingWithMRV.png Graphic file (type png)
 
 <use ForwardCheckingWithMRV.png>
-Package pdftex.def Info: ForwardCheckingWithMRV.png used on input line 491.
+Package pdftex.def Info: ForwardCheckingWithMRV.png used on input line 490.
 (pdftex.def)             Requested size: 240.25725pt x 163.92297pt.
 
 <MinimumConflicts.png, id=22, 364.36125pt x 165.61874pt>
 File: MinimumConflicts.png Graphic file (type png)
 
 <use MinimumConflicts.png>
-Package pdftex.def Info: MinimumConflicts.png used on input line 505.
+Package pdftex.def Info: MinimumConflicts.png used on input line 504.
 (pdftex.def)             Requested size: 236.832pt x 107.6509pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
+[]\OT1/ptm/m/n/10 In the drop-down, if you se-lect the COM-
+ []
+
+
+Underfull \hbox (badness 5217) in paragraph at lines 652--653
+\OT1/ptm/m/n/10 PARE[]TIME[]REQUIRED, you will see a com-par-i-son
+ []
+
+<N10nodesComputedComparison.png, id=23, 849.1725pt x 539.76656pt>
+File: N10nodesComputedComparison.png Graphic file (type png)
+
+<use N10nodesComputedComparison.png>
+Package pdftex.def Info: N10nodesComputedComparison.png used on input line 656.
+
+(pdftex.def)             Requested size: 229.27963pt x 145.7389pt.
+
+<BacktrackingNqueensSoln.png, id=24, 781.41937pt x 516.42938pt>
+File: BacktrackingNqueensSoln.png Graphic file (type png)
+
+<use BacktrackingNqueensSoln.png>
+Package pdftex.def Info: BacktrackingNqueensSoln.png used on input line 663.
+(pdftex.def)             Requested size: 234.42761pt x 154.93001pt.
+ [3 <./ForwardCheckingWithMRV.png> <./MinimumConflicts.png>] <XLS_nodesComputed
+.png, id=30, 508.90125pt x 260.47313pt>
+File: XLS_nodesComputed.png Graphic file (type png)
+
+<use XLS_nodesComputed.png>
+Package pdftex.def Info: XLS_nodesComputed.png used on input line 684.
+(pdftex.def)             Requested size: 259.53621pt x 132.83952pt.
+
+Overfull \hbox (7.53621pt too wide) in paragraph at lines 684--685
+[][] 
+ []
+
+<XLS_time.png, id=31, 377.91188pt x 260.47313pt>
+File: XLS_time.png Graphic file (type png)
+ <use XLS_time.png>
+Package pdftex.def Info: XLS_time.png used on input line 691.
+(pdftex.def)             Requested size: 230.52591pt x 158.88837pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./N10nodesComputedComparison.png> <./BacktrackingNqueensSoln.png> <./XLS_n
+odesComputed.png> <./XLS_time.png>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -432,25 +484,30 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3 <./ForwardCheckingWithMRV.png> <./MinimumConflicts.png>]
-(Ashu-NQueensProjectReport.aux) ) 
+[5
+
+] (Ashu-NQueensProjectReport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3183 strings out of 493634
- 53837 string characters out of 3134424
- 111941 words of memory out of 3000000
- 6581 multiletter control sequences out of 15000+200000
+ 3206 strings out of 493634
+ 54392 string characters out of 3134424
+ 111004 words of memory out of 3000000
+ 6600 multiletter control sequences out of 15000+200000
  34114 words of font info for 63 fonts, out of 3000000 for 9000
  1028 hyphenation exceptions out of 8191
- 36i,9n,49p,1224b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Ashwini/AppData/Local/Programs/MiKTe
-X 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Users/Ashwini/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Ashwini/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Ashwini/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Ashwini/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Ashu-NQueensProjectReport.pdf (3 pages, 123714 bytes).
+ 36i,9n,49p,1257b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/
+8r.enc}<C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/time
+s/utmb8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
+w/times/utmbi8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/urw/times/utmr8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on Ashu-NQueensProjectReport.pdf (5 pages, 241706 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

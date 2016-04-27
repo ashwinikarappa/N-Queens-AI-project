@@ -1,0 +1,69 @@
+package ai.star.ui;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+
+import javax.imageio.ImageIO;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EtchedBorder;
+
+import net.miginfocom.swing.MigLayout;
+import ai.star.enums.Panels;
+
+public class MyResultsPanel {
+
+	protected JPanel panel;
+	protected JLabel label;
+	public static BufferedImage QUEEN_IMAGE;
+	
+	public MyResultsPanel(Panels panelType) {
+		
+	
+		try {
+			URL imageUrl = MyResultsPanel.class.getResource("queen.png");
+			QUEEN_IMAGE  = ImageIO.read(imageUrl);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+		
+		panel = new JPanel();
+		panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, Color.BLACK, Color.GRAY));
+		panel.setLayout(new MigLayout());
+
+		label = new JLabel(panelType.getPanelType());
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setForeground(Color.BLUE);
+		label.setFont(new Font("Segoe UI", Font.BOLD, 24));
+		panel.add(label, "cell 0 0,alignx center,aligny center");
+	}
+
+	public JPanel getPanel() {
+		return panel;
+	}
+	
+	public void addToPanel(JScrollPane gridPanel) {
+		if (panel.getComponentCount() > 2)
+			panel.remove(2);
+		panel.add(gridPanel, "cell 0 2,alignx center, span, grow");
+
+		redraw();
+	}
+
+	public void show(boolean show) {
+		panel.setVisible(show);
+		redraw();
+	}
+
+	private void redraw() {
+		panel.revalidate();
+		panel.repaint();
+	}
+}

@@ -32,4 +32,7 @@
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="ai.star.csp.QueenMRV"/>
 <fullyQualifiedTypeName name="ai.star.csp.ForwardCheckingWithMRV"/>
+<fullyQualifiedTypeName name="ai.star.enums.NumberOfQueensForCompare"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="ai.star.ui.MyResultsPanel"/>
 </qualifiedTypeNameHistroy>
