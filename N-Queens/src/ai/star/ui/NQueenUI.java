@@ -124,26 +124,32 @@ public class NQueenUI {
 				switch ((Algorithm) comboBoxChoice.getSelectedItem()) {
 				case BACKTRACKING:
 					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setSelectedIndex(0);
 					comboBoxN.setVisible(true);
 					break;
 				case FORWARD_CHECKING:
 					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setSelectedIndex(0);
 					comboBoxN.setVisible(true);
 					break;
 				case MINIMUM_CONFLICTS:
 					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setSelectedIndex(0);
 					comboBoxN.setVisible(true);
 					break;
 				case FORWARD_MRV:
 					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setSelectedIndex(0);
 					comboBoxN.setVisible(true);
 					break;
 				case COMPARE_NUMBER_OF_NODES_COMPUTED:
 					comboBoxNforCompare.setVisible(true);
+					comboBoxNforCompare.setSelectedIndex(0);
 					comboBoxN.setVisible(false);
 					break;
-				case COMPARE_TIME_REQUORED:
+				case COMPARE_TIME_REQUIRED:
 					comboBoxNforCompare.setVisible(true);
+					comboBoxNforCompare.setSelectedIndex(0);
 					comboBoxN.setVisible(false);
 					break;
 				default:
@@ -222,7 +228,7 @@ public class NQueenUI {
 				case COMPARE_NUMBER_OF_NODES_COMPUTED:
 					compare(N, 0);
 					break;
-				case COMPARE_TIME_REQUORED:
+				case COMPARE_TIME_REQUIRED:
 					compare(N, 1);
 					break;
 				default:

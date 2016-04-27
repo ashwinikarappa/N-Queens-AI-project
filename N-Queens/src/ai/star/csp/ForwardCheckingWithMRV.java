@@ -1,7 +1,6 @@
 package ai.star.csp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Random;
 
@@ -23,7 +22,7 @@ public class ForwardCheckingWithMRV {
 		for(int i=0;i<numberOfQueens;i++){
 			queue.add(new QueenMRV(queenIndeces[i],numberOfQueens));
 		}
-		System.out.println("FW with MRV");
+		//System.out.println("FW with MRV");
 		MRV(puzzleBoard,  queue);
 		
 	}
@@ -40,7 +39,7 @@ public class ForwardCheckingWithMRV {
 		nodesComputed++;
 		if(queenQueue.isEmpty())
 		{
-			System.out.println("Done placement");
+			//System.out.println("Done placement");
 			//System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 			return 0;
 		}
@@ -58,7 +57,7 @@ public class ForwardCheckingWithMRV {
 				PuzzleBoard newPuzzleBoard = new PuzzleBoard(puzzleBoard);
 				updateSafePlaces(newPuzzleBoard,currentQueen.queenIndex, safePlace);
 				newPuzzleBoard.queenPlacement[currentQueen.queenIndex] = safePlace;
-				System.out.println(Arrays.toString(newPuzzleBoard.queenPlacement));
+				//System.out.println(Arrays.toString(newPuzzleBoard.queenPlacement));
 				updateMRVs(newPuzzleBoard, queenQueue);
 				if(!queenQueue.isEmpty()){
 					returnValue = MRV (newPuzzleBoard, queenQueue);
@@ -68,8 +67,8 @@ public class ForwardCheckingWithMRV {
 //						queenQueue.add(currentQueen);
 					}
 				}else{
-					System.out.println("Done placement");
-					System.out.println(Arrays.toString(newPuzzleBoard.queenPlacement));
+					//System.out.println("Done placement");
+					//System.out.println(Arrays.toString(newPuzzleBoard.queenPlacement));
 					solutions.add(newPuzzleBoard.queenPlacement);
 					return 0;
 				}

@@ -37,19 +37,19 @@ public class NQueensSolutionDriver {
 		fM.forwardCheckMRV(4, true);
 		System.out.println("***FW with MRV output ***");
 		d.printNqueenSolutions(fM.solutions);*/
-		NQueensSolutionDriver driver = new NQueensSolutionDriver();
+	//	NQueensSolutionDriver driver = new NQueensSolutionDriver();
 		/*driver.timer();
 		ArrayList<String> solutions = driver.computeNqueensSolution(15, Algorithm.BACKTRACKING);
 		driver.timer();*/
 		//driver.printNqueenSolutions(solutions);
-		
+		/*
 		 driver = new NQueensSolutionDriver();
 		 driver.timer();
 		 ArrayList<String> solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
 		 driver.timer();
 		//driver.printNqueenSolutions(solutions);
 		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(5,true);
-		driver.printNqueensComparison(results);
+		driver.printNqueensComparison(results);*/
 	}
 	public void printNqueenSolutions(ArrayList<String> solutions){
 		for(int i=0;i<solutions.size();i++){
@@ -104,7 +104,9 @@ public class NQueensSolutionDriver {
 			 ComparisonResults comparisonResult;
 			 ArrayList<ComparisonResults> results = new ArrayList<ComparisonResults>();
 			 for(int i=4;i<=numberOfQueens;i++){
-				
+				if(numberOfQueens > 15){
+					i= numberOfQueens;
+				}
 				 Backtracking bT = new Backtracking();
 				 timer();
 				 bT.backtrack(i, true);

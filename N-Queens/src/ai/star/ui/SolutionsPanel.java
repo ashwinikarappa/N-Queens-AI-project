@@ -20,7 +20,8 @@ import ai.star.enums.Panels;
 public class SolutionsPanel extends MyResultsPanel {
 	private JComboBox<String> solutionComboBox;
 
-	public SolutionsPanel(Panels panelType, DefaultComboBoxModel<String> solutionModel) {
+	public SolutionsPanel(Panels panelType,
+			DefaultComboBoxModel<String> solutionModel) {
 		super(panelType);
 
 		solutionComboBox = new JComboBox<String>(solutionModel);
@@ -43,8 +44,25 @@ public class SolutionsPanel extends MyResultsPanel {
 						if (solutions[outerIndex].equals("" + innerIndex)) {
 							imageLabel = new JLabel(new ImageIcon(QUEEN_IMAGE));
 						}
-						imageLabel.setPreferredSize(new Dimension(560 / NQueenUI.N, 560 / NQueenUI.N));
-						imageLabel.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+						imageLabel.setOpaque(true);
+						if (outerIndex % 2 == 0) {
+							if (innerIndex % 2 == 0) {
+								imageLabel.setBackground(Color.WHITE);
+							} else {
+								imageLabel.setBackground(Color.BLACK);
+							}
+						} else {
+							if (innerIndex % 2 == 0) {
+								imageLabel.setBackground(Color.BLACK);
+							} else {
+								imageLabel.setBackground(Color.WHITE);
+							}
+						}
+
+						imageLabel.setPreferredSize(new Dimension(
+								560 / NQueenUI.N, 560 / NQueenUI.N));
+						imageLabel.setBorder(BorderFactory
+								.createLineBorder(Color.BLUE));
 						gridPanel.add(imageLabel);
 					}
 				}

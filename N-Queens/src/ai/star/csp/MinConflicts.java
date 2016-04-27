@@ -1,7 +1,6 @@
 package ai.star.csp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Random;
@@ -53,8 +52,8 @@ public class MinConflicts {
 				//System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 			}
 		}while(conflictsExist(conflicts,puzzleBoard.queenPlacement));
-		System.out.println("\n\n Solution");
-		System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
+		//System.out.println("\n\n Solution");
+		//System.out.println(Arrays.toString(puzzleBoard.queenPlacement));
 		solutions.add(puzzleBoard.queenPlacement);
 	}
 	boolean changedPlacementIndex(int oldIndex, int newIndex){
@@ -128,6 +127,6 @@ public class MinConflicts {
 	public static void main(String[] args) {
 		MinConflicts m = new MinConflicts();
 		m.minConflicts(100);
-		System.out.println(m.nodesComputed);
+		//System.out.println(m.nodesComputed);
 	}
 }
