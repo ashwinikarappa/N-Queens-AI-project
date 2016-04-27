@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  27 APR 2016 06:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.7)  27 APR 2016 15:05
 entering extended mode
 **./Ashu-NQueensProjectReport.tex
 (Ashu-NQueensProjectReport.tex
@@ -334,10 +334,6 @@ File: 4QueensWrongSolution.png Graphic file (type png)
 Package pdftex.def Info: 4QueensWrongSolution.png used on input line 410.
 (pdftex.def)             Requested size: 64.01869pt x 58.91194pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
-[]\OT1/ptm/m/n/8 (a) |Wrong
- []
-
 <4QueensCorrectSolution.png, id=3, 132.495pt x 140.02313pt>
 File: 4QueensCorrectSolution.png Graphic file (type png)
 
@@ -374,14 +370,8 @@ Overfull \hbox (22.0205pt too wide) in paragraph at lines 470--471
 [][] 
  []
 
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
 
-Underfull \vbox (badness 5331) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2 <./Backtracking.png> <./ForwardChecking.png>]
 Underfull \hbox (badness 1527) in paragraph at lines 481--482
@@ -458,7 +448,7 @@ File: XLS_time.png Graphic file (type png)
 Package pdftex.def Info: XLS_time.png used on input line 691.
 (pdftex.def)             Requested size: 230.52591pt x 158.88837pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1122) has occurred while \output is active []
 
  [4 <./N10nodesComputedComparison.png> <./BacktrackingNqueensSoln.png> <./XLS_n
 odesComputed.png> <./XLS_time.png>]
@@ -505,7 +495,7 @@ s/utmb8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/times/utmbi8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Users/Ashwini/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on Ashu-NQueensProjectReport.pdf (5 pages, 241706 bytes).
+Output written on Ashu-NQueensProjectReport.pdf (5 pages, 241524 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

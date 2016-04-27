@@ -7,7 +7,7 @@
 
 1. Unzip the folder "axk142031 - N-Queens Project.zip".
 2. "SourceCode" folder, has all the source code files.
-3. "axk142031-ProjectReport" is the report for NQueens project.
+3. "axk142031-NQueensProjectReport" is the report for NQueens project.
 4. "NQueensRunnable.jar" is the application file, which you can run by double clicking it.
 5. "NQueensRunnable_lib" folder contains some important jar library files needed for the application.
 6. Make sure when you are running "NQueensRunnable.jar", you have "queens.png" image and "NQueensRunnable_lib" folder at the location, from where you are running the "NQueensRunnable.jar".
