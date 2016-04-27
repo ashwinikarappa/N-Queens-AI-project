@@ -23,7 +23,7 @@ public class ForwardCheckingWithMRV {
 		for(int i=0;i<numberOfQueens;i++){
 			queue.add(new QueenMRV(queenIndeces[i],numberOfQueens));
 		}
-		
+		System.out.println("FW with MRV");
 		MRV(puzzleBoard,  queue);
 		
 	}

@@ -21,14 +21,24 @@ public class ComparisonBarChart {
 		return dataset;
 	}
 
-	public void addToDataSet(Algorithm algorithm, int n, int nodes) {
+	public void addToDataSet(Algorithm algorithm, int n, long nodes) {
 		dataset.addValue(nodes, algorithm.getType(), "" + n);
 	}
-	
-	public JScrollPane getChartPanel() {
-		JFreeChart barChart = ChartFactory.createBarChart("Comparisons", "# of Queens", "# of Nodes Expanded",
-				getDataset(), PlotOrientation.VERTICAL, true, true, false);
-		JScrollPane scroller = new JScrollPane(new ChartPanel(barChart));
+
+	public JScrollPane getChartPanel(int nodesComputedOrTime) {
+		JFreeChart barChart;
+		JScrollPane scroller;
+		if (nodesComputedOrTime == 0) {
+			barChart = ChartFactory.createBarChart("Comparisons",
+					"# of Queens", "# of Nodes Expanded", getDataset(),
+					PlotOrientation.VERTICAL, true, true, false);
+			scroller = new JScrollPane(new ChartPanel(barChart));
+		} else {
+			barChart = ChartFactory.createBarChart("Comparisons",
+					"# of Queens", "Time required in msec", getDataset(),
+					PlotOrientation.VERTICAL, true, true, false);
+			scroller = new JScrollPane(new ChartPanel(barChart));
+		}
 		return scroller;
 	}
 

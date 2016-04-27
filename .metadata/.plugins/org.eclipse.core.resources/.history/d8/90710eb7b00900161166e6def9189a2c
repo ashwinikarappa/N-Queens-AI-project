@@ -1,9 +1,0 @@
-package ai.star.csp;
-
-import java.util.ArrayList;
-
-public class MinConflicts {
-	private int nodesComputed = 0;
-	private ArrayList<int[]> solutions = new ArrayList<int[]>();
-	
-}

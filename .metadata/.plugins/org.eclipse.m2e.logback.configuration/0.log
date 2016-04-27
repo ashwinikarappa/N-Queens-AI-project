@@ -1138,3 +1138,251 @@
 2016-04-25 01:57:17,059 [Worker-361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
 2016-04-25 01:57:17,059 [Worker-361] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-04-25 01:57:17,074 [Worker-361] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:44:25,272 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:44:25,304 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:44:25,304 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:44:25,319 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:44:29,934 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:44:29,946 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:44:29,946 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:44:29,954 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:46:44,432 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:46:44,432 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:46:44,432 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:46:44,464 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:47:08,337 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:47:08,349 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:47:08,349 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:47:08,361 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:47:33,329 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:47:33,333 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:47:33,333 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:47:33,341 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:48:31,869 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:48:31,884 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:48:31,884 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:48:31,900 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:50:41,227 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:50:41,242 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:50:41,242 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:50:41,242 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-25 19:50:47,943 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:50:47,947 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-25 19:50:47,951 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-25 19:50:47,955 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 18:44:43,674 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:44:43,674 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 18:44:43,674 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:44:43,690 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 18:44:59,559 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:44:59,559 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 18:44:59,559 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:44:59,575 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 18:45:08,409 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:45:08,414 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 18:45:08,417 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:45:08,421 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 18:45:25,288 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:45:25,303 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 18:45:25,303 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:45:25,303 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 18:47:09,387 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:47:09,402 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 18:47:09,402 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 18:47:09,424 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:44:03,428 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:44:03,428 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:44:03,428 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:44:03,428 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:45:50,196 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:45:50,211 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:45:50,211 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:45:50,211 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:48:32,498 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:32,498 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:48:32,498 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:32,514 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:48:37,751 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:37,758 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:48:37,760 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:37,764 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:48:52,766 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:52,773 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:48:52,774 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:48:52,777 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:49:06,304 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:49:06,304 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:49:06,304 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:49:06,319 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:49:50,120 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:49:50,135 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:49:50,137 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:49:50,145 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:53:24,750 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:53:24,760 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:53:24,764 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:53:24,769 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:56:55,658 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:56:55,658 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:56:55,658 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:56:55,658 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:57:07,160 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:07,166 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:57:07,168 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:07,174 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:57:34,158 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:34,159 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:57:34,159 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:34,159 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:57:48,642 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:48,642 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:57:48,642 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:57:48,642 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:58:12,446 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:58:12,446 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:58:12,446 [Worker-177] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:58:12,446 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:58:55,808 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:58:55,823 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:58:55,823 [Worker-181] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:58:55,823 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:59:15,232 [Worker-186] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:15,232 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:59:15,232 [Worker-186] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:15,232 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:59:42,104 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:42,104 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:59:42,120 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:42,125 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-26 23:59:56,800 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:56,800 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-26 23:59:56,800 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-26 23:59:56,816 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:00:35,070 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:00:35,070 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:00:35,070 [Worker-184] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:00:35,088 [Worker-184] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:00:45,710 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:00:45,725 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:00:45,725 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:00:45,737 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:01:28,869 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:01:28,869 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:01:28,869 [Worker-179] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:01:28,890 [Worker-179] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:03:22,166 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:03:22,168 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:03:22,168 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:03:22,168 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:03:25,376 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:03:25,383 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:03:25,384 [Worker-185] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:03:25,384 [Worker-185] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:04:31,339 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:04:31,344 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:04:31,345 [Worker-182] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:04:31,351 [Worker-182] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:23:47,668 [Worker-191] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:23:47,668 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:23:47,668 [Worker-191] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:23:47,684 [Worker-191] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:24:32,310 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:24:32,325 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:24:32,325 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:24:32,325 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:25:19,998 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:25:19,998 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:25:19,998 [Worker-190] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:25:20,014 [Worker-190] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:26:33,889 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:26:33,889 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:26:33,889 [Worker-164] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:26:33,905 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:26:51,880 [Worker-187] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:26:51,895 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:26:51,895 [Worker-187] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:26:51,895 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:37:32,581 [Worker-189] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:32,588 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:37:32,590 [Worker-189] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:32,596 [Worker-189] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:37:44,725 [Worker-196] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:44,730 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:37:44,732 [Worker-196] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:44,739 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:37:54,568 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:54,575 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:37:54,577 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:37:54,583 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:41:17,518 [Worker-196] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:41:17,525 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:41:17,527 [Worker-196] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:41:17,533 [Worker-196] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:41:29,457 [Worker-193] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:41:29,463 [Worker-193] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:41:29,464 [Worker-193] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:41:29,469 [Worker-193] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:45:59,533 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:45:59,559 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:45:59,561 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:45:59,569 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:51:29,848 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:51:29,848 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:51:29,848 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:51:29,848 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:53:31,772 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:53:31,777 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:53:31,779 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:53:31,786 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:55:39,436 [Worker-199] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:55:39,436 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:55:39,436 [Worker-199] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:55:39,436 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:56:34,433 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:56:34,449 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:56:34,449 [Worker-202] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:56:34,449 [Worker-202] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 00:59:54,739 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:59:54,739 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 00:59:54,739 [Worker-201] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 00:59:54,755 [Worker-201] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:03:37,873 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:03:37,893 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:03:37,894 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:03:37,898 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:04:37,741 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:04:37,757 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:04:37,757 [Worker-198] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:04:37,763 [Worker-198] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:06:24,571 [Worker-203] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:06:24,577 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:06:24,578 [Worker-203] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:06:24,584 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:07:34,498 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:07:34,498 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:07:34,498 [Worker-197] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:07:34,498 [Worker-197] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:12:47,988 [Worker-203] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:12:47,988 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:12:48,004 [Worker-203] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:12:48,004 [Worker-203] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:13:15,954 [Worker-206] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:13:15,962 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:13:15,963 [Worker-206] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:13:15,968 [Worker-206] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:14:10,797 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:14:10,798 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:14:10,798 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:14:10,798 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:14:56,388 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:14:56,393 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:14:56,394 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:14:56,398 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:16:33,302 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:16:33,304 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:16:33,304 [Worker-208] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:16:33,304 [Worker-208] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources
+2016-04-27 01:17:32,324 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:17:32,324 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\main\resources
+2016-04-27 01:17:32,324 [Worker-204] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-04-27 01:17:32,339 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Masters\Spring 2016\AI\N-Queens project\N-Queens\src\test\resources

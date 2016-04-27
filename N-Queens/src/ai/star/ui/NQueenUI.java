@@ -25,6 +25,7 @@ import net.miginfocom.swing.MigLayout;
 import ai.star.csp.ComparisonResults;
 import ai.star.csp.NQueensSolutionDriver;
 import ai.star.enums.Algorithm;
+import ai.star.enums.NumberOfQueensForCompare;
 import ai.star.enums.Panels;
 import ai.star.enums.Queens;
 
@@ -42,6 +43,7 @@ public class NQueenUI {
 	private JPanel nPanel;
 	private JLabel lblN;
 	private JComboBox<Queens> comboBoxN;
+	private JComboBox<NumberOfQueensForCompare> comboBoxNforCompare;
 	private JPanel buttonsPanel;
 	private JButton btnSolve;
 
@@ -116,8 +118,43 @@ public class NQueenUI {
 		comboBoxChoice.setToolTipText("Algorithm Choice");
 		comboBoxChoice.setForeground(new Color(0, 128, 0));
 		comboBoxChoice.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		comboBoxChoice.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				switch ((Algorithm) comboBoxChoice.getSelectedItem()) {
+				case BACKTRACKING:
+					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setVisible(true);
+					break;
+				case FORWARD_CHECKING:
+					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setVisible(true);
+					break;
+				case MINIMUM_CONFLICTS:
+					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setVisible(true);
+					break;
+				case FORWARD_MRV:
+					comboBoxNforCompare.setVisible(false);
+					comboBoxN.setVisible(true);
+					break;
+				case COMPARE_NUMBER_OF_NODES_COMPUTED:
+					comboBoxNforCompare.setVisible(true);
+					comboBoxN.setVisible(false);
+					break;
+				case COMPARE_TIME_REQUORED:
+					comboBoxNforCompare.setVisible(true);
+					comboBoxN.setVisible(false);
+					break;
+				default:
+					break;
+
+				}
+			}
+		});
 		choicePanel.add(comboBoxChoice,
 				"cell 1 2 2 1,alignx center,aligny center");
+		
 
 		nPanel = new JPanel();
 		nPanel.setBorder(new LineBorder(Color.BLACK, 1, true));
@@ -144,8 +181,23 @@ public class NQueenUI {
 				N = ((Queens) comboBoxN.getSelectedItem()).getN();
 			}
 		});
-		N = ((Queens) comboBoxN.getSelectedItem()).getN();
+		
+		comboBoxNforCompare = new JComboBox<>();
+		comboBoxNforCompare.setModel(new DefaultComboBoxModel<NumberOfQueensForCompare>(NumberOfQueensForCompare.values()));
+		comboBoxNforCompare.setSelectedIndex(0);
+		nPanel.add(comboBoxNforCompare, "cell 1 2 2 1,alignx center,aligny center");
+		comboBoxNforCompare.setForeground(new Color(0, 128, 0));
+		comboBoxNforCompare.setFont(new Font("Segoe UI", Font.BOLD, 14));
+		comboBoxNforCompare.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				N = ((NumberOfQueensForCompare) comboBoxNforCompare.getSelectedItem()).getN();
+			}
+		});
+		comboBoxNforCompare.setVisible(false);
+		N = ((Queens) comboBoxN.getSelectedItem()).getN();
+		
 		buttonsPanel = new JPanel();
 		buttonsPanel.setBorder(new LineBorder(Color.BLACK, 1, true));
 		controlsPanel.add(buttonsPanel);
@@ -167,8 +219,11 @@ public class NQueenUI {
 				case FORWARD_MRV:
 					mrv(N);
 					break;
-				case COMPARE:
-					compare(N);
+				case COMPARE_NUMBER_OF_NODES_COMPUTED:
+					compare(N, 0);
+					break;
+				case COMPARE_TIME_REQUORED:
+					compare(N, 1);
 					break;
 				default:
 					break;
@@ -258,14 +313,16 @@ public class NQueenUI {
 		solutionsPanel.show(true);
 	}
 
-	protected void compare(int n) {
+	protected void compare(int n, int nodesComputedOrTime) {
 		if (solutionsPanel != null)
 			solutionsPanel.show(false);
 		ComparisonBarChart barChart = new ComparisonBarChart();
 		NQueensSolutionDriver driver = new NQueensSolutionDriver();
-		ArrayList<ComparisonResults> comparisonResults = driver
-				.compareNqueensSolutions(n);
-
+		ArrayList<ComparisonResults> comparisonResults;
+		if (nodesComputedOrTime == 0)
+			comparisonResults = driver.compareNqueensSolutions(n, true);
+		else
+			comparisonResults = driver.compareNqueensSolutions(n, false);
 		for (int i = 0; i < comparisonResults.size(); i++) {
 			ComparisonResults c = comparisonResults.get(i);
 			barChart.addToDataSet(c.getAlgorithmType(), c.getNumberOfQueens(),
@@ -274,7 +331,8 @@ public class NQueenUI {
 		if (comparisonsPanel != null)
 			comparisonsPanel.show(false);
 		comparisonsPanel = new ComparisonsPanel(Panels.COMPARE);
-		comparisonsPanel.addToPanel(barChart.getChartPanel());
+		comparisonsPanel
+				.addToPanel(barChart.getChartPanel(nodesComputedOrTime));
 		mainPanel.add(comparisonsPanel.getPanel(), BorderLayout.CENTER);
 		comparisonsPanel.show(true);
 	}

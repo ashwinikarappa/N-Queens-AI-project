@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.SafeVarargs"/>
 <fullyQualifiedTypeName name="ForwardChecking"/>
 <fullyQualifiedTypeName name="ChessBoard"/>
 <fullyQualifiedTypeName name="HillClimbing"/>
 <fullyQualifiedTypeName name="star.objectoriented.ForwardChecking"/>
 <fullyQualifiedTypeName name="star.objectoriented.NqueenPuzzleBoard"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="star.objectoriented.Backtracking"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="ai.star.csp.NqueenPuzzleSolver"/>
+<fullyQualifiedTypeName name="ai.star.csp.ForwardChecking"/>
+<fullyQualifiedTypeName name="ai.star.csp.MinConflicts"/>
+<fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
+<fullyQualifiedTypeName name="ai.star.ui.SolutionsPanel"/>
+<fullyQualifiedTypeName name="ai.star.csp.Backtracking"/>
+<fullyQualifiedTypeName name="ai.star.csp.NQueensSolutionDriver"/>
+<fullyQualifiedTypeName name="ai.star.enums.Algorithm"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="ai.star.csp.ComparisonResults"/>
+<fullyQualifiedTypeName name="javax.swing.border.Border"/>
+<fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+<fullyQualifiedTypeName name="ai.star.ui.NQueenUI"/>
+<fullyQualifiedTypeName name="ai.star.csp.QueenConflicts"/>
+<fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+<fullyQualifiedTypeName name="ai.star.csp.PuzzleBoard"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="ai.star.csp.QueenMRV"/>
+<fullyQualifiedTypeName name="ai.star.csp.ForwardCheckingWithMRV"/>
 </qualifiedTypeNameHistroy>

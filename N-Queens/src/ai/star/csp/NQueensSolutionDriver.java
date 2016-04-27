@@ -5,6 +5,22 @@ import java.util.Arrays;
 import ai.star.enums.Algorithm;
 
 public class NQueensSolutionDriver {
+	
+	private int phase = 0;
+	private long startTime, endTime, elapsedTime;
+
+	public void timer()
+	   {
+	       if(phase == 0) {
+		    startTime = System.currentTimeMillis();
+		    phase = 1;
+		} else {
+		    endTime = System.currentTimeMillis();
+	           elapsedTime = endTime-startTime;
+	           System.out.println(":" + elapsedTime + " msec.");
+	            phase = 0;
+	       }
+	   }
 	public static void main(String[] args){
 		/*NQueensSolutionDriver d = new NQueensSolutionDriver();
 		ForwardChecking f = new ForwardChecking();
@@ -22,9 +38,17 @@ public class NQueensSolutionDriver {
 		System.out.println("***FW with MRV output ***");
 		d.printNqueenSolutions(fM.solutions);*/
 		NQueensSolutionDriver driver = new NQueensSolutionDriver();
-		ArrayList<String> solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
-		driver.printNqueenSolutions(solutions);
-		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(5);
+		/*driver.timer();
+		ArrayList<String> solutions = driver.computeNqueensSolution(15, Algorithm.BACKTRACKING);
+		driver.timer();*/
+		//driver.printNqueenSolutions(solutions);
+		
+		 driver = new NQueensSolutionDriver();
+		 driver.timer();
+		 ArrayList<String> solutions = driver.computeNqueensSolution(4, Algorithm.FORWARD_MRV);
+		 driver.timer();
+		//driver.printNqueenSolutions(solutions);
+		ArrayList<ComparisonResults> results = driver.compareNqueensSolutions(5,true);
 		driver.printNqueensComparison(results);
 	}
 	public void printNqueenSolutions(ArrayList<String> solutions){
@@ -76,29 +100,50 @@ public class NQueensSolutionDriver {
 			}
 				return result;
 		 }
-		 public ArrayList<ComparisonResults> compareNqueensSolutions(int numberOfQueens){
+		 public ArrayList<ComparisonResults> compareNqueensSolutions(int numberOfQueens, boolean comparisonBasedOnNodesComputed){
 			 ComparisonResults comparisonResult;
 			 ArrayList<ComparisonResults> results = new ArrayList<ComparisonResults>();
 			 for(int i=4;i<=numberOfQueens;i++){
 				
 				 Backtracking bT = new Backtracking();
+				 timer();
 				 bT.backtrack(i, true);
-				 comparisonResult = new ComparisonResults(Algorithm.BACKTRACKING, i, bT.nodesComputed);
+				 timer();
+				 if(comparisonBasedOnNodesComputed )
+					 comparisonResult = new ComparisonResults(Algorithm.BACKTRACKING, i, bT.nodesComputed);
+				 else
+					 comparisonResult = new ComparisonResults(Algorithm.BACKTRACKING, i, elapsedTime);
+
 				 results.add(comparisonResult);
 				
 				 ForwardChecking fC = new ForwardChecking();
+				 timer();
 				 fC.forwardCheck(i, true);
-				 comparisonResult = new ComparisonResults(Algorithm.FORWARD_CHECKING, i, fC.nodesComputed);
+				 timer();
+				 if(comparisonBasedOnNodesComputed)
+					 comparisonResult = new ComparisonResults(Algorithm.FORWARD_CHECKING, i, fC.nodesComputed);
+				 else
+					 comparisonResult = new ComparisonResults(Algorithm.FORWARD_CHECKING, i, elapsedTime);
 				 results.add(comparisonResult);
 				
 				 MinConflicts mC = new MinConflicts();
+				 timer();
 				 mC.minConflicts(i);
-				 comparisonResult = new ComparisonResults(Algorithm.MINIMUM_CONFLICTS, i, mC.nodesComputed);
+				 timer();
+				 if(comparisonBasedOnNodesComputed)
+					 comparisonResult = new ComparisonResults(Algorithm.MINIMUM_CONFLICTS, i, mC.nodesComputed);
+				 else
+					 comparisonResult = new ComparisonResults(Algorithm.MINIMUM_CONFLICTS, i, elapsedTime);
 				 results.add(comparisonResult);
 				 
 				 ForwardCheckingWithMRV fMRV = new ForwardCheckingWithMRV();
+				 timer();
 				 fMRV.forwardCheckingWithMRV(numberOfQueens, false);
-				 comparisonResult = new ComparisonResults(Algorithm.FORWARD_MRV, i, fMRV.nodesComputed);
+				 timer();
+				 if(comparisonBasedOnNodesComputed)
+					 comparisonResult = new ComparisonResults(Algorithm.FORWARD_MRV, i, fMRV.nodesComputed);
+				 else
+					 comparisonResult = new ComparisonResults(Algorithm.FORWARD_MRV, i, elapsedTime);
 				 results.add(comparisonResult);
 				
 			 }

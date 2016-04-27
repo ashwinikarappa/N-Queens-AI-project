@@ -1,0 +1,5 @@
+package ai.star.enums;
+
+public class NumberOfQueensForCompare {
+
+}

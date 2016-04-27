@@ -5,14 +5,14 @@ import ai.star.enums.Algorithm;
 public class ComparisonResults {
 	Algorithm algorithmType;
 	int numberOfQueens;
-	int numberOFNodeComputed;
+	long numberOFNodeComputed;
 	public ComparisonResults() {
 		// TODO Auto-generated constructor stub
 		algorithmType = null;
 		numberOFNodeComputed = 0;
 		numberOfQueens = 0;
 	}
-	public ComparisonResults(Algorithm algoType, int numOfQueens, int nodecComputed) {
+	public ComparisonResults(Algorithm algoType, int numOfQueens, long nodecComputed) {
 		algorithmType = algoType;
 		numberOfQueens = numOfQueens;
 		numberOFNodeComputed = nodecComputed;
@@ -29,7 +29,7 @@ public class ComparisonResults {
 	public void setNumberOfQueens(int numberOfQueens) {
 		this.numberOfQueens = numberOfQueens;
 	}
-	public int getNumberOFNodeComputed() {
+	public long getNumberOFNodeComputed() {
 		return numberOFNodeComputed;
 	}
 	public void setNumberOFNodeComputed(int numberOFNodeComputed) {

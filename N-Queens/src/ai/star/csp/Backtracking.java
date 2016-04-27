@@ -6,7 +6,21 @@ public class Backtracking {
 	public int nodesComputed = 0;
 	public int numberOfSolutions = 0;
 	public ArrayList<int[]> solutions ;
+	private int phase = 0;
+	private long startTime, endTime, elapsedTime;
 
+	public void timer()
+	   {
+	       if(phase == 0) {
+		    startTime = System.currentTimeMillis();
+		    phase = 1;
+		} else {
+		    endTime = System.currentTimeMillis();
+	           elapsedTime = endTime-startTime;
+	           System.out.println(":" + elapsedTime + " msec.");
+	            phase = 0;
+	       }
+	   }
 	public int getNodesComputed() {
 		return nodesComputed;
 	}
